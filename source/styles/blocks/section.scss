@@ -1,0 +1,183 @@
+// блоки основных секций главной страницы
+
+.section {
+  // заголовок секции
+  &__title {
+    @include text(36px, 1.2em, 700);
+
+    margin: 0 0 44px;
+
+    @include tablet-layout {
+      margin-bottom: 68px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 44px;
+      font-size: 56px;
+      line-height: 64px;
+    }
+
+    &--promo {
+      @include tablet-layout {
+        margin-bottom: 44px;
+      }
+
+      @include desktop-start {
+        margin-bottom: 45px;
+      }
+    }
+  }
+
+  // единица повторяющегося блока из списка
+  &__item {
+    margin: 0 0 32px;
+    background-color: transparent;
+
+    @include mobile-wide {
+      margin-right: 16px;
+    }
+
+    @include tablet-start {
+      margin-right: 20px;
+    }
+
+    @include tablet-layout {
+      width: calc(100% / 3 - 20.1px);
+    }
+
+    @include desktop-start {
+      margin-right: 32px;
+      margin-bottom: 56px;
+    }
+
+    &--blog {
+      @include mobile-wide {
+        margin-right: 0;
+      }
+
+      @include tablet-start {
+        margin-right: 20px;
+      }
+
+      @include desktop-start {
+        margin-right: 32px;
+        margin-bottom: 56px;
+      }
+
+      &:nth-child(2n+1) {
+        @include mobile-wide {
+          margin-right: 16px;
+        }
+
+        @include tablet-start {
+          margin-right: 20px;
+        }
+
+        @include desktop-start {
+          margin-right: 32px;
+          margin-bottom: 56px;
+        }
+      }
+
+      &:nth-child(2n+1):last-child {
+        @include mobile-wide {
+          margin-right: auto;
+          margin-left: auto;
+        }
+
+        @include tablet-start {
+          margin-right: 20px;
+          margin-left: 0;
+        }
+
+        @include desktop-start {
+          margin-right: 32px;
+          margin-bottom: 56px;
+        }
+      }
+    }
+  }
+
+  // список повторяющихся блоков
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include mobile-wide {
+      margin-right: -16px;
+    }
+
+    @include tablet-start {
+      margin-right: -20px;
+    }
+
+    @include desktop-start {
+      margin-right: -32px;
+    }
+
+    &--blog {
+      @include mobile-wide {
+        margin-right: 0;
+      }
+
+      @include tablet-start {
+        margin-right: -20px;
+      }
+
+      @include desktop-start {
+        margin-right: -32px;
+      }
+    }
+
+    & .section__item {
+      width: 100%;
+
+      @include mobile-wide {
+        width: calc(100% / 2 - 16px);
+      }
+
+      @include tablet-start {
+        // 20.1px - фикс для IE
+        width: calc(100% / 3 - 20.1px);
+      }
+
+      @include tablet-layout {
+        width: calc(100% / 3 - 20.1px);
+      }
+
+      @include desktop-start {
+        // 32.1px - фикс для IE
+        width: calc(100% / 3 - 32.1px);
+      }
+    }
+  }
+
+  // кнопка перехода
+  &__link {
+    margin: 14px auto 0;
+
+    @include desktop-start {
+      margin-top: -2px;
+    }
+
+    &--blog {
+      @include desktop-start {
+        margin-top: 0;
+      }
+    }
+  }
+
+  // переопределения для макета скелета загрузки
+  &--skel {
+
+    .section__title {
+      font-size: 48px;
+      line-height: 1.2em;
+    }
+
+  }
+}

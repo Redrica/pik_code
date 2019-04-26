@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Главная страница</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="page">
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
+    <!-- inject:svg -->
+    <!-- endinject -->
+  </div>
+
+  <header class="header  header--main">
+    <div class="header__wrapper">
+      <nav class="main-nav">
+        <a class="main-nav__logo  logo">
+          <img class="logo__image" src="img/pik-digital-logo.svg" width="124" height="47" alt="Логотип PIK digital">
+        </a>
+        <!-- Мобильное меню -->
+        <!-- Описание работы в файле menu.js -->
+        <!-- Активный класс меню  main-nav__link--active -->
+        <button class="main-nav__toggle" aria-label="Открыть меню">
+          <span class="main-nav__burger"></span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="vacancies.html">Вакансии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="blog.html">Блог</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="meetups.html">Мероприятия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Решения</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="about.html">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="page__wrapper">
+    <header class="page__header">
+      <h1 class="page__main-title">ИТ на стройке?
+        <br>Так бывает!</h1>
+    </header>
+    <main class="page__main  main">
+      <p class="main__text">ПИК Digital — ИТ-компания, которая делает стройку технологичной и современной областью. <br>
+Наши проекты касаются всей деятельности ПИК: производства материалов, проектирования домов, строительства, девелопмента, финансов и экономики, закупок и продаж.</p>
+      <!-- карточки вакансий -->
+      <section class="main__vacancy  section">
+        <h2 class="section__title">Мы ищем</h2>
+        <ul class="section__list">
+          <li class="section__item  card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Frontend-разработчик</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/derendyaev.png" width="48" height="48" alt="Аватар Паши Дерендяева">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Паши Дерендяева</p>
+              </div>
+            </a>
+          </li>
+          <li class="section__item  card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Дизайнер интерфейсов/ Дизайнер&nbsp;цифровых продуктов</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/izmailov.png" width="48" height="48" alt="Аватар Александра Измайлова">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Александра Измайлова</p>
+              </div>
+            </a>
+          </li>
+          <li class="section__item  section__item--stretch  card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Senior iOS developer</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/zueva.png" width="48" height="48" alt="Аватар Ани Зуевой">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Ани Зуевой</p>
+              </div>
+            </a>
+          </li>
+          <li class="section__item  card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">iOS разработчик</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/derendyaev.png" width="48" height="48" alt="Аватар Паши Дерендяева">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Паши Дерендяева</p>
+              </div>
+            </a>
+          </li>
+          <li class="section__item  section__item--stretch  card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Android-разработчик</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/izmailov.png" width="48" height="48" alt="Аватар Александра Измайлова">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Александра Измайлова</p>
+              </div>
+            </a>
+          </li>
+          <li class="section__item  card card--search">
+            <a class="card__link card__link--search" href="search.html" aria-label="Open">
+              <h3 class="card__title card__title--search">Не нашли вакансии?</h3>
+              <p class="card__name card__name--search">Вам сюда</p>
+            </a>
+          </li>
+        </ul>
+        <a class="section__link  button  button--blue" href="#">Показать все вакансии</a>
+      </section>
+
+      <!-- промо-секция мероприятия -->
+      <section class="main__promo  section">
+        <h2 class="section__title  section__title--promo">PIK Digital Day</h2>
+        <div class="promo">
+          <p class="promo__text">
+            <span class="promo__highlighted  promo__highlighted--pink">&lt;</span><span class="promo__highlighted  promo__highlighted--cyan">h1</span><span class="promo__highlighted  promo__highlighted--pink">&gt;</span>Приглашаем на чемпионат<span class="promo__highlighted  promo__highlighted--pink">&lt;/</span><span class="promo__highlighted  promo__highlighted--cyan">h1</span><span class="promo__highlighted  promo__highlighted--pink">&gt;</span>
+          </p>
+          <p class="promo__text">
+            <span class="promo__highlighted  promo__highlighted--pink">&lt;</span><span class="promo__highlighted  promo__highlighted--cyan">p</span><span class="promo__highlighted  promo__highlighted--pink">&gt;</span>
+          </p>
+          <p class="promo__text  promo__text--inner">
+            По анализу данных
+            <br> готовых ИТ-решений для строительства
+          </p>
+          <p class="promo__text">
+            <span class="promo__highlighted  promo__highlighted--pink">&lt;/</span><span class="promo__highlighted  promo__highlighted--cyan">p</span><span class="promo__highlighted  promo__highlighted--pink">&gt;</span>
+          </p>
+          <p class="promo__text  promo__text--comment">&lt;!-- 14 июля 2018, Москва --&gt;</p>
+          <a class="promo__link  button  button--violet" href="form-register.html">&lt;/ Участвовать&gt;</a>
+        </div>
+      </section>
+
+      <!-- Секция анонсов записей в блоге.
+        В карточках анонсов ограничение не более четырех строк устанавливается скриптом text-cut.js
+        путем задания ограничения количества символов -->
+      <section class="main__blog  section">
+        <h2 class="section__title">Мы пишем</h2>
+        <ul class="section__list  section__list--blog">
+          <!-- карточка анонса записи -->
+          <li class="section__item  section__item--blog  blog-card">
+            <div class="blog-card__container">
+              <picture class="blog-card__picture">
+                <source media="(min-width: 1296px)" srcset="img/blog_react-meetup_desktop.jpg 1x, img/blog_react-meetup_desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/blog_react-meetup_tablet.jpg 1x, img/blog_react-meetup_tablet@2x.jpg 2x">
+                <img class="blog-card__image" src="img/blog_react_meetup_mobile.jpg" srcset="img/blog_react_meetup_mobile@2x.jpg 2x" width="343"
+                  height="216" alt="React Moscow Meetup">
+              </picture>
+              <h3 class="blog-card__title"><a class="blog-card__link" href="#">React Moscow Meetup</a></h3>
+              <p class="blog-card__text">23 мая мы провели React Moscow Meetup при партнёрстве с сообществом React.js.</p>
+              <a class="blog-card__author  person" href="staff.html">
+                <img class="person__image  avatar" src="img/derendyaev.png" width="140" height="140" alt="Паша Дерендяев">
+                <p class="person__name  person__name--blue">Паша Дерендяев</p>
+              </a>
+            </div>
+          </li>
+          <li class="section__item  section__item--blog  blog-card">
+            <div class="blog-card__container">
+              <picture class="blog-card__picture">
+                <source media="(min-width: 1296px)" srcset="img/blog_conference_desktop.jpg 1x, img/blog_conference_desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/blog_conference_tablet.jpg 1x, img/blog_conference_tablet@2x.jpg 2x">
+                <img class="blog-card__image" src="img/blog_conference_mobile.jpg" srcset="img/blog_conference_mobile@2x.jpg 2x" width="343"
+                  height="216" alt="Конференция ПИК Digital">
+              </picture>
+              <h3 class="blog-card__title"><a class="blog-card__link" href="#">Большие новости большой конференции</a></h3>
+              <p class="blog-card__text">Большая конференция ПИК Digital в Москве</p>
+              <a class="blog-card__author  person" href="staff.html">
+                <img class="person__image  avatar" src="img/izmailov.png" alt="Александр Измайлов">
+                <p class="person__name  person__name--blue">Александр Измайлов</p>
+              </a>
+            </div>
+          </li>
+          <li class="section__item  section__item--blog  blog-card">
+            <div class="blog-card__container">
+              <picture class="blog-card__picture">
+                <source media="(min-width: 1296px)" srcset="img/blog_talks_desktop.jpg 1x, img/blog_talks_desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/blog_talks_tablet.jpg 1x, img/blog_talks_tablet@2x.jpg 2x">
+                <img class="blog-card__image" src="img/blog_talks_mobile.jpg" srcset="img/blog_talks_mobile@2x.jpg 2x" width="343" height="216"
+                  alt="Mobile Talks">
+              </picture>
+              <h3 class="blog-card__title"><a class="blog-card__link" href="#">Mobile Talks 🚀</a></h3>
+              <p class="blog-card__text">12 апреля прошел традиционный iOS-митап. Было круто!</p>
+              <a class="blog-card__author  person" href="staff.html">
+                <img class="person__image  avatar" src="img/zueva.png" width="140" height="140" alt="Аня Зуева">
+                <p class="person__name  person__name--blue">Аня Зуева</p>
+              </a>
+            </div>
+          </li>
+        </ul>
+        <a class="section__link  section__link--blog  button  button--blue" href="blog.html">Перейти в блог</a>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a class="footer__logo  logo">
+        <img class="logo__image" src="img/pik-digital-logo.svg" width="104" height="40" alt="Логотип PIK digital">
+      </a>
+      <div class="footer__info">
+        <p class="footer__text">ООО "ПИК Технологии" 2018</p>
+        <p class="footer__text">
+          <a class="footer__link" href="tel:79453474343">+ 7 (945) 347-43-43</a>
+        </p>
+      </div>
+      <!-- блок соц.сетей -->
+      <ul class="footer__social  social">
+        <li class="social__item">
+          <a class="social__link  social__link--fb" href="#">
+            <span class="visually-hidden">PIK-digital на Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--vk" href="#">
+            <span class="visually-hidden">PIK-digital ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--tw" href="#">
+            <span class="visually-hidden">PIK-digital в Твиттере</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/menu.min.js"></script>
+  <script src="js/text-cut.min.js"></script>
+  <script src="js/header.min.js"></script>
+</body>
+
+</html>

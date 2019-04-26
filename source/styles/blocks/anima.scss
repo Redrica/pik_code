@@ -1,0 +1,425 @@
+/* Общие */
+
+.anima__el {
+  border-radius: 4px;
+  background-color: #f3f3f3;
+}
+
+.anima__item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.anima__blink-wrap {
+  position: absolute;
+  z-index: 10;
+  top: -48px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.anima__part--m {
+  width: 100%;
+
+  @include tablet-start {
+    display: none;
+  }
+}
+
+.anima__part--tu {
+  display: none;
+
+  @include tablet-start {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Мероприятия */
+
+.meetup.anima {
+  .anima__el--time {
+    width: 100%;
+    height: 46px;
+    margin-bottom: 56px;
+
+    @include desktop-start {
+      height: 56px;
+    }
+  }
+
+  .anima__el--title {
+    width: 100%;
+    height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .anima__el--title-short {
+    width: 55%;
+    height: 24px;
+    margin-bottom: 75px;
+
+    @include desktop-start {
+      margin-bottom: 100px;
+    }
+  }
+
+  .anima__el--button {
+    width: 100%;
+    height: 42px;
+
+    @include desktop-start {
+      height: 52px;
+    }
+  }
+}
+
+/* Решения */
+
+.decisions.anima {
+  /* header */
+  .anima__item {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet-start {
+      flex-direction: row;
+    }
+  }
+
+  .anima__wrapper {
+    width: 100%;
+    margin-bottom: 24px;
+    padding-right: 36px;
+
+    @include tablet-start {
+      width: 50%;
+      margin-bottom: 0;
+    }
+
+    @include desktop-start {
+      padding-right: 56px;
+    }
+  }
+
+  .anima__el--icon {
+    flex-shrink: 0;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 32px;
+
+    @include desktop-start {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  .anima__el--subtitle {
+    width: 70%;
+    height: 32px;
+    margin-bottom: 32px;
+  }
+
+  .anima__el--text {
+    width: 100%;
+    height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .anima__el--text-short {
+    width: 50%;
+    height: 24px;
+    margin-bottom: 32px;
+  }
+
+  .anima__el--text-x-short {
+    width: 35%;
+    height: 24px;
+  }
+
+  .anima__el--image {
+    width: 100%;
+    margin-bottom: 24px;
+    height: 404px;
+
+    @include tablet-start {
+      width: 50%;
+      margin-bottom: 0;
+    }
+  }
+
+  /* Карточки с решениями */
+
+  .anima__el--card-title {
+    width: 100%;
+    height: 32px;
+    margin-bottom: 32px;
+  }
+
+  .anima__el--card-text {
+    width: 100%;
+    height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .anima__el--card-last-text {
+    width: 100%;
+    height: 24px;
+    margin-bottom: 80px;
+  }
+
+  .anima__el--card-image {
+    width: calc(100% + 40px);
+    height: 195px;
+
+    @include tablet-start {
+      transform: translate(-20px, 0);
+    }
+
+    @include desktop-start {
+      width: calc(100% + 64px);
+      height: 244px;
+      transform: translate(-32px, 0);
+    }
+  }
+}
+
+/* Карточка пользователя (сотрудника) */
+
+.staff.anima {
+  .anima__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 48px;
+    /* width100 */
+  }
+
+  .anima__el--avatar {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    margin-right: 32px;
+  }
+
+  .anima__el--username,
+  .anime__el--tagline {
+    width: 170px;
+    height: 24px;
+
+    @include desktop-start {
+      width: 200px;
+    }
+    /* bg */
+  }
+}
+
+/* Блог */
+
+.blog__list.anima {
+  /* Общие для блога */
+  .anima__el--author-avatar {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+
+  /* Для мобильной версии блога */
+  .anima__part--m {
+    .anima__item {
+      margin-bottom: 64px;
+    }
+
+    .anima__wrapper--author {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .anima__el--article-image {
+      width: 100%;
+      height: 195px;
+      margin-bottom: 24px;
+      border-radius: 12px;
+    }
+
+    .anima__el--article-title {
+      width: 100%;
+      height: 24px;
+      margin-bottom: 12px;
+    }
+
+    .anima__el--article-short-title {
+      width: 70%;
+      height: 24px;
+      margin-bottom: 16px;
+    }
+
+    .anima__el--author-name {
+      width: 170px;
+      height: 16px;
+      margin-left: 16px;
+
+      /* @include desktop-start {
+        width: 200px;
+      } */
+    }
+
+    .anima__el--release-date {
+      width: 35%;
+      height: 16px;
+    }
+  }
+
+  /* Для планшетной версии блога и выше */
+  .anima__part--tu {
+    .anima__item--narrow {
+      display: flex;
+      margin-bottom: 96px;
+    }
+
+    .anima__item--wide { // статья на всю ширину
+      margin-bottom: 96px;
+    }
+
+    .anima__wrapper--image {
+      width: 50%;
+    }
+
+    .anima__wrapper--image-reverse { /* для статьи с картинкой в правой колонке */
+      width: 50%;
+      padding-top: 100px;
+    }
+
+    .anima__el--article-title {
+      width: 100%;
+      height: 24px;
+      margin-bottom: 16px;
+    }
+
+    .anima__el--article-title-single { /* для статьи с однострочным заголовком */
+      width: 100%;
+      height: 24px;
+      margin-bottom: 36px;
+    }
+
+    .anima__el--article-short-title {
+      width: 80%;
+      height: 24px;
+      margin-bottom: 36px;
+    }
+
+    .anima__el--article-short-title-reverse {
+      width: 65%;
+      height: 24px;
+      margin-bottom: 36px;
+    }
+
+    .anima__el--article-title-wide { /* для статьи на всю ширину без колонок */
+      width: 308px;
+      height: 40px;
+      margin-bottom: 32px;
+    }
+
+    .anima__el--article-image {
+      width: 100%;
+      border-radius: 12px;
+
+      @include tablet-start {
+        height: 250px;
+      }
+
+      @include desktop-start {
+        height: 340px;
+      }
+    }
+
+    .anima__el--article-image-wide { /* для статьи на всю ширину без колонок */
+      width: 100%;
+      margin-bottom: 32px;
+      height: 608px;
+      border-radius: 12px;
+    }
+
+    .anima__wrapper--text {
+      width: 50%;
+      padding-top: 100px;
+      padding-left: 32px;
+    }
+
+    .anima__wrapper--text-single { /* для статьи с однострочным заголовком */
+      width: 50%;
+      padding-top: 60px;
+      padding-left: 32px;
+    }
+
+    .anima__wrapper--text-reverse { /* для статьи с картинкой в правой колонке */
+      width: 50%;
+    }
+
+    .anima__el--article-text {
+      width: 100%;
+      height: 24px;
+      margin-bottom: 16px;
+    }
+
+    .anima__el--article-short-text {
+      width: 55%;
+      height: 24px;
+      margin-bottom: 56px;
+
+      @include desktop-start {
+        margin-bottom: 148px;
+      }
+    }
+
+    .anima__el--article-text-reverse { /* для статьи с картинкой в правой колонке */
+      height: 24px;
+      margin-bottom: 16px;
+      margin-right: 32px;
+    }
+
+    .anima__el--article-short-text-wide { /* для статьи на всю ширину без колонок */
+      width: 55%;
+      margin-bottom: 56px;
+      height: 24px;
+    }
+
+    .anima__wrapper-data {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .anima__wrapper-data-reverse {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 32px;
+    }
+
+    .anima__el--author-name {
+      width: 170px;
+      height: 16px;
+      margin-right: 32px;
+      margin-left: 16px;
+
+      @include desktop-start {
+        width: 200px;
+      }
+    }
+
+    .anima__el--release-date {
+      width: 108px;
+      height: 16px;
+      margin-left: auto;
+    }
+  }
+}
+

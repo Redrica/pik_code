@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страница сотрудника</title>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <script src="js/picturefill.min.js"></script>
+</head>
+
+<body class="page">
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
+    <!-- inject:svg -->
+    <!-- endinject -->
+  </div>
+
+  <header class="header">
+    <div class="header__wrapper">
+      <nav class="main-nav">
+        <a class="main-nav__logo  logo" href="main.html">
+          <img class="logo__image" src="img/pik-digital-logo.svg" width="124" height="47" alt="Логотип PIK digital">
+        </a>
+        <button class="main-nav__toggle" aria-label="Открыть меню">
+          <span class="main-nav__burger"></span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="vacancies.html">Вакансии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="blog.html">Блог</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="meetups.html">Мероприятия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Решения</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="about.html">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page__wrapper">
+    <main class="page__staff container">
+      <section class="staff anima">
+
+        <h1 class="visually-hidden staff__title">Страница сотрудника</h1>
+
+        <!--Карточка пользователя: фото + имя-->
+        <div class="staff__card user-card user-card--skel">
+          <div class="blink"></div>
+          <div class="anima__wrapper">
+            <div class="anima__el anima__el--avatar"></div>
+            <div class="user-card__name user-card__name--staff anima__el anima__el--bg anima__el--username"></div>
+          </div>
+          <div class="staff__tagline anima__el anime__el--tagline"></div>
+        </div>
+        <div class="staff__vacancies">
+          <!--Карточка вакансии-->
+          <article class="staff__vacancy card vacancy-skeleton"></article>
+          <article class="staff__vacancy card vacancy-skeleton"></article>
+          <article class="staff__vacancy staff__vacancy--skel card vacancy-search-skeleton"></article>
+        </div>
+        <div class="staff__tagline anima__el anime__el--tagline"></div>
+        <!--Карточка новостей-->
+        <section class="section">
+          <ul class="section__list  section__list--blog">
+            <!-- карточка анонса записи, скелет-->
+            <li class="section__item  section__item--blog  blog-card">
+              <div class="blog-card__container  blog-card__container--skel  blog-card-skeleton">
+              </div>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a class="footer__logo  logo">
+        <img class="logo__image" src="img/pik-digital-logo.svg" width="104" height="40" alt="Логотип PIK digital">
+      </a>
+      <div class="footer__info">
+        <p class="footer__text">ООО "ПИК Технологии" 2018</p>
+        <p class="footer__text">
+          <a class="footer__link" href="tel:79453474343">+ 7 (945) 347-43-43</a>
+        </p>
+      </div>
+      <ul class="footer__social  social">
+        <li class="social__item">
+          <a class="social__link  social__link--fb" href="#">
+            <span class="visually-hidden">PIK-digital на Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--vk" href="#">
+            <span class="visually-hidden">PIK-digital ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--tw" href="#">
+            <span class="visually-hidden">PIK-digital в Твиттере</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/menu.min.js"></script>
+  <script src="js/text-cut.min.js"></script>
+  <script src="js/header.min.js"></script>
+
+</body>
+
+</html>

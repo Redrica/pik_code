@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Статья</title>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <script src="js/picturefill.min.js"></script>
+</head>
+
+<body class="page">
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
+    <!-- inject:svg -->
+    <!-- endinject -->
+  </div>
+
+  <header class="header">
+    <div class="header__wrapper">
+      <nav class="main-nav">
+        <a class="main-nav__logo  logo" href="main.html">
+          <img class="logo__image" src="img/pik-digital-logo.svg" width="124" height="47" alt="Логотип PIK digital">
+        </a>
+        <button class="main-nav__toggle" aria-label="Открыть меню">
+          <span class="main-nav__burger"></span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="vacancies.html">Вакансии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="blog.html">Блог</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="meetups.html">Мероприятия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Решения</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="about.html">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page__wrapper">
+    <main class="page__article container">
+      <a class="page__breadcrumbs page__breadcrumbs--article breadcrumbs" href="#" aria-label="Back">Блог/</a>
+      <!--Статья-->
+      <section class="article">
+        <!--Шапка статьи-->
+        <div class="article__header article-header">
+          <h1 class="article-header__title">Как это было: десятый выпускной Школы анализа данных</h1>
+          <!--Карточка пользователя: фото + имя + время статьи -->
+          <div class="article-header__data article-data">
+            <!--Карточка пользователя: фото + имя-->
+            <div class="article-data__author user-card">
+              <a class="user-card__link" href="staff.html">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/pavlov-desktop.png">
+                  <img class="user-card__avatar user-card__avatar--article avatar" src="img/pavlov-mobile.png" alt="Аватар Владислава Павлова">
+                </picture>
+                <p class="user-card__name">Владислав Павлов</p>
+              </a>
+            </div>
+            <p class="article-data__release">
+              <time class="article-data__time" datetime="2018-06-28T14:00">28 июня, 14:00</time>
+            </p>
+          </div>
+        </div>
+        <!--Контент статьи-->
+        <div class="article__content article-content">
+          <p class="article-content__text">
+            15 июня в московском офисе Яндекса отмечали выпускной Школы анализа данных. Дипломы ШАД в этом году получили 102 человека.
+            Большинство — студенты, аспиранты и недавние выпускники ведущих технических вузов.
+          </p>
+          <picture class="article-content__picture">
+            <source media="(min-width: 1025px)" srcset="img/graduation-1_desktop.jpg 1x, img/graduation-1_desktop@2x.jpg 2x">
+            <source media="(min-width: 376px)" srcset="img/graduation-1_tablet.jpg 1x, img/graduation-1_tablet@2x.jpg 2x">
+            <img class="article-content__image" src="img/graduation-1_mobile.jpg" srcset="img/graduation-1_mobile@2x.jpg 2x" alt="Фото с выпускного №1">
+          </picture>
+          <p class="article-content__text">
+            Нынешний выпуск — десятый по счёту. Школа анализа данных открылась в 2007 году. Тогда на первый курс набрали 80 человек,
+            а до выпускного дошли лишь 36 — в ШАД всегда строго следили за успеваемостью и отчисляли тех, кто не справляется.
+          </p>
+          <picture class="article-content__picture">
+            <source media="(min-width: 1025px)" srcset="img/graduation-2_desktop.jpg 1x, img/graduation-2_desktop@2x.jpg 2x">
+            <source media="(min-width: 376px)" srcset="img/graduation-2_tablet.jpg 1x, img/graduation-2_tablet@2x.jpg 2x">
+            <img class="article-content__image" src="img/graduation-2_mobile.jpg" srcset="img/graduation-2_mobile@2x.jpg 2x" alt="Фото с выпускного №2">
+          </picture>
+          <p class="article-content__text">
+            Сейчас в Школе работают три отделения — анализа данных, больших данных и компьютерных наук. Филиалы ШАД действуют в Екатеринбурге,
+            Нижнем Новгороде и Минске, а в Новосибирске и Санкт-Петербурге программу можно освоить на базе Computer Science
+            Center. Также в ШАД можно учиться заочно.
+          </p>
+          <picture class="article-content__picture">
+            <source media="(min-width: 1025px)" srcset="img/graduation-3_desktop.jpg 1x, img/graduation-3_desktop@2x.jpg 2x">
+            <source media="(min-width: 376px)" srcset="img/graduation-3_tablet.jpg 1x, img/graduation-3_tablet@2x.jpg 2x">
+            <img class="article-content__image" src="img/graduation-3_mobile.jpg" srcset="img/graduation-3_mobile@2x.jpg 2x" alt="Фото с выпускного №3">
+          </picture>
+          <p class="article-content__text">
+            По традиции, на выпускной в Москву приглашаются все слушатели Школы: не только москвичи, но и те, кто учился в филиалах или
+            заочно.
+          </p>
+          <picture class="article-content__picture">
+            <source media="(min-width: 1025px)" srcset="img/graduation-4_desktop.jpg 1x, img/graduation-4_desktop@2x.jpg 2x">
+            <source media="(min-width: 376px)" srcset="img/graduation-4_tablet.jpg 1x, img/graduation-4_tablet@2x.jpg 2x">
+            <img class="article-content__image" src="img/graduation-4_mobile.jpg" srcset="img/graduation-4_mobile@2x.jpg 2x" alt="Фото с выпускного №4">
+          </picture>
+          <p class="article-content__text">
+            Слушатели ШАД обычно совмещают обучение с работой или занятиями в вузе: лекции и семинары проходят по вечерам. В Школе изучают
+            дисциплины, которые обычно не входят в вузовскую программу, но при этом пользуются спросом в IT-сфере, науке
+            и других отраслях. Преподаватели Школы — сотрудники Яндекса и учёные из ведущих отечественных и зарубежных научных
+            центров.
+          </p>
+          <picture class="article-content__picture">
+            <source media="(min-width: 1025px)" srcset="img/graduation-5_desktop.jpg 1x, img/graduation-5_desktop@2x.jpg 2x">
+            <source media="(min-width: 376px)" srcset="img/graduation-5_tablet.jpg 1x, img/graduation-5_tablet@2x.jpg 2x">
+            <img class="article-content__image" src="img/graduation-5_mobile.jpg" srcset="img/graduation-5_mobile@2x.jpg 2x" alt="Фото с выпускного №5">
+          </picture>
+          <p class="article-content__text">
+            Особенность ШАД — гибкий учебный план. В дополнение к основным дисциплинам Школа предлагает множество спецкурсов — из них
+            можно выбрать самые интересные. Программу регулярно обновляют: убирают устаревшие курсы и добавляют новые. Например,
+            в этом году в Школе начали читать курс, посвящённый беспилотным автомобилям. Одно из занятий проходит на полигоне,
+            где ребята наблюдают за испытаниями беспилотника Яндекса.
+          </p>
+          <picture class="article-content__picture">
+            <source media="(min-width: 1025px)" srcset="img/graduation-6_desktop.jpg 1x, img/graduation-6_desktop@2x.jpg 2x">
+            <source media="(min-width: 376px)" srcset="img/graduation-6_tablet.jpg 1x, img/graduation-6_tablet@2x.jpg 2x">
+            <img class="article-content__image" src="img/graduation-6_mobile.jpg" srcset="img/graduation-6_mobile@2x.jpg 2x" alt="Фото с выпускного №6">
+          </picture>
+          <p class="article-content__text article-content__text--last">
+            Выпускники ШАД становятся разработчиками, аналитиками, исследователями. Их можно встретить в российских и зарубежных IT-компаниях
+            и в научной среде. Они не теряют связь со Школой: кто-то приходит послушать курсы, которых раньше не было в программе,
+            а кто-то возвращается в ШАД в роли преподавателя.
+          </p>
+          <p class="article-content__text">
+            Обучение в Школе бесплатное. Набор проходит каждую весну: в этом году заявки подали почти четыре тысячи человек. Некоторые
+            дисциплины из программы ШАД доступны в виде онлайн-курсов — освоить их могут все желающие.
+          </p>
+        </div>
+        <!--Блок кнопок социальных сетей-->
+        <!--Поделиться статьей в социальных сетях-->
+        <div class="article__share share">
+          <ul class="share__list">
+            <li class="share__item">
+              <a class="share__link share-button share-button--fb" href="#" aria-label="Open">
+                <span class="share-button__text">Поделиться</span>
+              </a>
+            </li>
+            <li class="share__item">
+              <a class="share__link share-button share-button--vk" href="#" aria-label="Open">
+                <span class="share-button__text">Поделиться</span>
+              </a>
+            </li>
+            <li class="share__item">
+              <a class="share__link share-button share-button--twitter" href="#" aria-label="Open">
+                <span class="share-button__text share-button__text--twitter">Твитнуть</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a class="footer__logo  logo">
+        <img class="logo__image" src="img/pik-digital-logo.svg" width="104" height="40" alt="Логотип PIK digital">
+      </a>
+      <div class="footer__info">
+        <p class="footer__text">ООО "ПИК Технологии" 2018</p>
+        <p class="footer__text">
+          <a class="footer__link" href="tel:79453474343">+ 7 (945) 347-43-43</a>
+        </p>
+      </div>
+      <ul class="footer__social  social">
+        <li class="social__item">
+          <a class="social__link  social__link--fb" href="#">
+            <span class="visually-hidden">PIK-digital на Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--vk" href="#">
+            <span class="visually-hidden">PIK-digital ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--tw" href="#">
+            <span class="visually-hidden">PIK-digital в Твиттере</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/menu.min.js"></script>
+  <script src="js/header.min.js"></script>
+
+</body>
+
+</html>

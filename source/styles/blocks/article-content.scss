@@ -1,0 +1,45 @@
+// Стили абзацев на странице Статья
+
+.article-content__text {
+  margin: 0;
+  margin-bottom: 21px;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+
+  @include tablet-layout {
+    margin-bottom: 36px;
+    letter-spacing: 0;
+  }
+
+  @include desktop-start {
+    margin-bottom: 52px;
+    font-size: 22px;
+    line-height: 34px;
+  }
+}
+
+.article-content__text--last {
+  margin-bottom: 36px;
+
+  @include tablet-layout {
+    margin-bottom: 35px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 38px;
+  }
+}
+
+.article-content__image {
+  margin-bottom: 23px;
+
+  @include tablet-layout {
+    margin-bottom: 40px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 56px;
+  }
+}
+

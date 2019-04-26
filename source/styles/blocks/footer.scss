@@ -1,0 +1,99 @@
+// Стили футера
+
+// основная часть с фоном
+.footer {
+  position: relative;
+  padding: 24px 0 30px;
+  background-color: $blue-main;
+
+  @include tablet-start {
+    padding: 32px 0;
+  }
+
+  @include desktop-start {
+    padding: 30px 0 29px;
+  }
+
+  // обертка для контента
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 16px;
+
+    @include tablet-start {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 48px;
+    }
+
+    @include desktop-start {
+      @include wrapper;
+
+      padding: 0;
+    }
+  }
+
+  // логотип
+  &__logo {
+    width: 104px;
+    height: 40px;
+    margin-bottom: 22px;
+
+    @include tablet-start {
+      width: 124px;
+      height: 47px;
+      margin-bottom: 0;
+    }
+
+    @include desktop-start {
+      width: 132px;
+      height: 50px;
+      margin-left: 44px;
+    }
+  }
+
+  // текстовая часть
+  &__info {
+    @include text(16px, 1.2em, 400);
+
+    margin-bottom: 22px;
+    text-align: center;
+    color: $white-main;
+
+    @include tablet-start {
+      margin: 0 0 0 44px;
+      font-size: 18px;
+    }
+
+    @include desktop-start {
+      margin-left: 4px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @include desktop-start {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white-main;
+  }
+
+  // блок ссылок на социальные сети
+  &__social {
+    margin: 0;
+
+    @include desktop-start {
+      margin-right: 96px;
+    }
+  }
+}

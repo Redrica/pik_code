@@ -1,0 +1,79 @@
+// Стили карточки пользователя
+
+.user-card {
+  display: flex;
+  align-items: center;
+
+  &--skel {
+    position: relative;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    @include tablet-start {
+      width: 50%;
+    }
+
+    @include desktop-start {
+      width: 30%;
+    }
+  }
+}
+
+.user-card__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $blue-main;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+
+  &:hover[href],
+  &:focus[href] {
+    opacity: 0.7;
+  }
+
+  &:active[href] {
+    opacity: 0.3;
+  }
+}
+
+.user-card__avatar {
+  margin-right: 16px;
+}
+
+.user-card__avatar--article {
+  @include desktop-start {
+    margin-right: 31px;
+  }
+}
+
+.user-card__avatar--staff {
+  margin-right: 24px;
+
+  @include desktop-start {
+    margin-right: 36px;
+  }
+}
+
+.user-card__name {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: $blue-main;
+}
+
+.user-card__name--staff {
+  @include desktop-start {
+    font-size: 26px;
+  }
+}
+
+.user-card__name--blog {
+  @include tablet-layout {
+    font-size: 18px;
+  }
+
+  @include desktop-start {
+    font-size: 22px;
+  }
+}

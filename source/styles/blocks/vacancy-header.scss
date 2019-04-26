@@ -1,0 +1,33 @@
+// Стили блока шапки вакансии (название вакансии + команда)
+
+.vacancy-header__title {
+  margin: 0;
+  padding-top: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 36px;
+
+  @include tablet-layout {
+    padding-top: 25px;
+  }
+
+  @include desktop-start {
+    padding-top: 86px;
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
+
+.vacancy-header__team {
+  margin-bottom: 41px;
+  padding-top: 41px;
+
+  @include tablet-layout {
+    margin-bottom: 42px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 59px;
+    padding-top: 36px;
+  }
+}

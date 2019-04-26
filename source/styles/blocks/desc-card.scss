@@ -1,0 +1,219 @@
+.dec-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 45px 20px 20px;
+  border-radius: 12px;
+  background-color: $white-main;
+  box-shadow: 0 0 40px 0 rgba(161, 161, 161, 0.28);
+  transition-duration: 0.5s;
+  //overflow: hidden;
+
+  @include tablet-start {
+    align-items: stretch;
+    padding-top: 65px;
+  }
+
+  @include desktop-start {
+    padding: 85px 32px 28px;
+    box-shadow: 0 0 40px 0 rgba(161, 161, 161, 0.28);
+  }
+
+  &:hover {
+    box-shadow: 0 0 40px 14px rgba(140, 140, 140, 0.2);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: translate(-50%, -50%);
+
+    @include tablet-start {
+      width: 75px;
+      height: 75px;
+    }
+
+    @include desktop-start {
+      width: 96px;
+      height: 96px;
+    }
+  }
+
+  &--skel {
+    width: 100%;
+    padding-bottom: 0;
+
+    @include tablet-start {
+      padding-bottom: 0;
+    }
+
+    @include desktop-start {
+      padding-bottom: 0;
+    }
+
+    &::before {
+      border-radius: 50%;
+      background-color: #f3f3f3;
+    }
+  }
+
+  &__title {
+    @include text(22px, 24px, 500);
+    margin: 0 0 20px;
+    text-align: center;
+
+    @include desktop-start {
+      margin-bottom: 15px;
+      font-size: 26px;
+      line-height: 32px;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.5s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__text {
+    @include text(18px, 24px, 400);
+    margin: 0 0 30px;
+    text-align: center;
+
+    @include desktop-start {
+      margin-bottom: 28px;
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: calc(100% + 40px);
+    text-align: center;
+
+    @include tablet-start {
+      margin-top: auto;
+      transform: translate(-20px, 0);
+    }
+
+    @include desktop-start {
+      width: calc(100% + 64px);
+      transform: translate(-32px, 0);
+    }
+  }
+
+  &--gsu {
+    &::before {
+      background-image: url("../img/icon-g-suite.png");
+
+      @include retina-resolution {
+        background-image: url("../img/icon-g-suite@2x.png");
+      }
+    }
+  }
+
+  &--gdo {
+    &::before {
+      background-image: url("../img/icon-g-doc.png");
+
+      @include retina-resolution {
+        background-image: url("../img/icon-g-doc@2x.png");
+      }
+    }
+  }
+
+  &--con {
+    &::before {
+      background-image: url("../img/icon-contour.png");
+
+      @include retina-resolution {
+        background-image: url("../img/icon-contour@2x.png");
+      }
+    }
+  }
+
+  &--chrome {
+    &::before {
+      background-image: url("../img/icon-chrome.png");
+
+      @include retina-resolution {
+        background-image: url("../img/icon-chrome@2x.png");
+      }
+    }
+  }
+
+  &--cal {
+    &::before {
+      background-image: url("../img/icon-calendar.png");
+
+      @include retina-resolution {
+        background-image: url("../img/icon-calendar@2x.png");
+      }
+    }
+  }
+
+  &--gduo {
+    &::before {
+      background-image: url("../img/icon-g-duo.png");
+
+      @include retina-resolution {
+        background-image: url("../img/icon-g-duo@2x.png");
+      }
+    }
+  }
+
+  &--gplus {
+    &::before {
+      background-image: url("../img/icon-g-plus.png");
+
+      @include retina-resolution {
+        background-image: url("../img/icon-g-plus@2x.png");
+      }
+    }
+  }
+
+  &--gallo {
+    &::before {
+      background-image: url("../img/icon-g-allo.png");
+
+      @include retina-resolution {
+        background-image: url("../img/icon-g-allo@2x.png");
+      }
+    }
+  }
+
+  &--gmb {
+    &::before {
+      background-image: url("../img/icon-g-business.png");
+
+      @include retina-resolution {
+        background-image: url("../img/icon-g-business@2x.png");
+      }
+    }
+  }
+
+  &--ga {
+    &::before {
+      background-image: url("../img/icon-g-a.png");
+
+      @include retina-resolution {
+        background-image: url("../img/icon-g-a@2x.png");
+      }
+    }
+  }
+}

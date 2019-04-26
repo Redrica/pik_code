@@ -1,0 +1,70 @@
+// Стили кнопки поделиться в социальных сетях
+
+.share-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 343px;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: $page-color;
+  border-radius: 8px;
+  background-color: $blue-main;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+
+  &:hover,
+  &:focus {
+    background-color: $blue-button-hover;
+  }
+
+  &:active {
+    background-color: $blue-button-pressed;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @include tablet-start {
+    width: auto;
+    padding: 0 16px;
+    padding-left: 16px;
+  }
+}
+
+.share-button--fb::before {
+  background-image: url("../img/facebook.svg");
+}
+
+.share-button--vk::before {
+  background-image: url("../img/vk.svg");
+}
+
+.share-button--twitter::before {
+  background-image: url("../img/twitter.svg");
+}
+
+.share-button__text {
+  display: inline-block;
+  padding: 15px 0;
+  padding-left: 8px;
+}
+
+.share-button__text--twitter {
+  padding-right: 22px;
+
+  @include mobile-wide {
+    padding-right: 0;
+  }
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вакансии</title>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+</head>
+
+<body class="page">
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
+    <!-- inject:svg -->
+    <!-- endinject -->
+  </div>
+
+  <header class="header">
+    <div class="header__wrapper">
+      <nav class="main-nav">
+        <a class="main-nav__logo  logo" href="main.html">
+          <img class="logo__image" src="img/pik-digital-logo.svg" width="124" height="47" alt="Логотип PIK digital">
+        </a>
+        <button class="main-nav__toggle" aria-label="Открыть меню">
+          <span class="main-nav__burger"></span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active">Вакансии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="blog.html">Блог</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="meetups.html">Мероприятия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Решения</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="about.html">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page__wrapper">
+    <main class="page__vacancy container">
+      <!--Панель действий пользователя-->
+      <div class="panel">
+        <h1 class="panel__title">Вакансии</h1>
+        <div class="panel__buttons">
+          <button class="panel__button panel__button--filter" type="button" aria-label="Open">
+            <span class="visually-hidden">Фильтр</span>
+          </button>
+          <button class="panel__button panel__button--search" type="button" aria-label="Open">
+            <span class="visually-hidden">Поиск</span>
+          </button>
+        </div>
+        <!--Фильтр вакансий-->
+        <div class="panel__filter filter">
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">Разработка IOS</span>
+          </button>
+          <button class="filter__button chip chip--active" type="button" aria-label="Check">
+            <span class="chip__fix">Дизайн</span>
+          </button>
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">Скрам-мастера</span>
+          </button>
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">Системные аналитки</span>
+          </button>
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">Разработка Android</span>
+          </button>
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">Тестирование</span>
+          </button>
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">Фронтенд-разработка</span>
+          </button>
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">Управление продуктом</span>
+          </button>
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">Поток</span>
+          </button>
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">Маркетинг</span>
+          </button>
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">Иследования, респонденты</span>
+          </button>
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">HR</span>
+          </button>
+          <button class="filter__button chip" type="button" aria-label="Check">
+            <span class="chip__fix">Big Data</span>
+          </button>
+        </div>
+        <!--Модальное окно поиска-->
+        <div class="panel__search modal-search modal-search__hidden">
+          <form class="modal-search__form" action="#" method="get">
+            <label for="site_search">
+              <span class="visually-hidden">Поиск по вакансиям</span>
+            </label>
+            <input class="modal-search__field" type="search" name="search" id="site_search" placeholder="Поиск по вакансиям" autocomplete="off">
+            <button class="modal-search__close" type="button">
+              <span class="visually-hidden" aria-label="Close">Закрыть поиск</span>
+            </button>
+          </form>
+          <!--Карточки для демонстрации поиска-->
+          <div class="modal-search__list modal-search__hidden">
+            <article class="modal-search__card card card--result">
+              <h2 class="card__title card__title--result">
+                <a class="card__link card__link--result" href="vacancy.html" aria-label="Open">Дизайнер интерфейсов/Дизайнер&nbsp;цифровых продуктов</a>
+              </h2>
+              <a class="card__team card__team--result" href="staff.html">
+                <img class="card__image" src="img/izmailov.png" width="48" height="48" alt="Аватар Александра Измайлова">
+                <div class="card__info">
+                  <p class="card__tagline">В команду</p>
+                  <p class="card__name">Александра Измайлова</p>
+                </div>
+              </a>
+            </article>
+            <article class="modal-search__card card card--result card--last">
+              <h2 class="card__title card__title--result">
+                <a class="card__link card__link--result" href="vacancy.html" aria-label="Open">Дизайнер-стажер</a>
+              </h2>
+              <a class="card__team card__team--result" href="staff.html">
+                <img class="card__image" src="img/golovacheva.png" width="48" height="48" alt="Аватар Елены Головачовой">
+                <div class="card__info">
+                  <p class="card__tagline">В команду</p>
+                  <p class="card__name">Елены Головачовой</p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </div>
+      <!--Блок представленных вакансий-->
+      <section class="vacancies">
+        <h2 class="visually-hidden">Актуальные вакансии</h2>
+        <div class="vacancies__list">
+          <!--Карточка вакансии-->
+          <!-- item-1 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Frontend-разработчик</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/derendyaev.png" width="48" height="48" alt="Аватар Паши Дерендяева">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Паши Дерендяева</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-2 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Дизайнер интерфейсов/ Дизайнер&nbsp;цифровых продуктов</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/izmailov.png" width="48" height="48" alt="Аватар Александра Измайлова">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Александра Измайлова</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-3 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Senior iOS developer</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/zueva.png" width="48" height="48" alt="Аватар Ани Зуевой">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Ани Зуевой</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-4 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">iOS разработчик</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/derendyaev.png" width="48" height="48" alt="Аватар Паши Дерендяева">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Паши Дерендяева</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-5 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Android-разработчик</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/izmailov.png" width="48" height="48" alt="Аватар Александра Измайлова">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Александра Измайлова</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-6 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Java-разработчик</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/izmailov.png" width="48" height="48" alt="Аватар Александра Измайлова">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Александра Измайлова</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-7 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Andriod UI Engineer</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/vasiliev.png" width="48" height="48" alt="Аватар Ивана Васильева">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Ивана Васильева</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-8 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">IOS UI Engineer</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/vasiliev.png" width="48" height="48" alt="Аватар Ивана Васильева">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Ивана Васильева</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-9 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Руководитель проектов</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/sergeev.png" width="48" height="48" alt="Аватар Евгения Сергеева">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Евгения Сергеева</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-10 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Стажер в ПИК-digital</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/pik.png" width="48" height="48" alt="Аватар ПИК-digital">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">ПИК-digital</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-11 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Web-аналитик</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/usmanov.png" width="48" height="48" alt="Аватар Альберта Усманова">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Альберта Усманова</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-12 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">.NET-разработчик</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/smirnov.png" width="48" height="48" alt="Аватар Максима Смирнова">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Максима Смирнова</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-13 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Java разработчик (Fullstack)</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/novikov.png" width="48" height="48" alt="Аватар Алексея Новикова">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Алексея Новикова</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-14 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Backend разработчик</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/pik.png" width="48" height="48" alt="Аватар ПИК-digital">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">ПИК-digital</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-15 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Системный администратор</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/pik.png" width="48" height="48" alt="Аватар ПИК-digital">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">ПИК-digital</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-16 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Системный аналитик SAP</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/pik.png" width="48" height="48" alt="Аватар ПИК-digital">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">ПИК-digital</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка вакансии-->
+          <!-- item-17 -->
+          <article class="vacancies__card card">
+            <h3 class="card__title">
+              <a class="card__link" href="vacancy.html" aria-label="Open">Ассистент консультанта SAP</a>
+            </h3>
+            <a class="card__team" href="staff.html">
+              <img class="card__image" src="img/pik.png" width="48" height="48" alt="Аватар ПИК-digital">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">ПИК-digital</p>
+              </div>
+            </a>
+          </article>
+          <!--Карточка поиска вакансии-->
+          <!-- item-18 -->
+          <article class="vacancies__card vacancies__card--search card card--search">
+            <a class="card__link card__link--search" href="search.html" aria-label="Open">
+              <h3 class="card__title card__title--search">Не нашли вакансии?</h3>
+              <p class="card__name card__name--search">Вам сюда</p>
+            </a>
+          </article>
+        </div>
+      </section>
+      <!--Подложка при активации модального окна поиска / фильтра-->
+      <div class="overlay"></div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a class="footer__logo  logo">
+        <img class="logo__image" src="img/pik-digital-logo.svg" width="104" height="40" alt="Логотип PIK digital">
+      </a>
+      <div class="footer__info">
+        <p class="footer__text">ООО "ПИК Технологии" 2018</p>
+        <p class="footer__text">
+          <a class="footer__link" href="tel:79453474343">+ 7 (945) 347-43-43</a>
+        </p>
+      </div>
+      <ul class="footer__social  social">
+        <li class="social__item">
+          <a class="social__link  social__link--fb" href="#">
+            <span class="visually-hidden">PIK-digital на Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--vk" href="#">
+            <span class="visually-hidden">PIK-digital ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--tw" href="#">
+            <span class="visually-hidden">PIK-digital в Твиттере</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/filter.min.js"></script>
+  <script src="js/search.min.js"></script>
+  <script src="js/menu.min.js"></script>
+  <script src="js/header.min.js"></script>
+
+  <!--Полифилы для IE-->
+  <script src="js/array-from.min.js"></script>
+  <script src="js/closest.min.js"></script>
+  <script src="js/matches.min.js"></script>
+
+</body>
+
+</html>

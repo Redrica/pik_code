@@ -1,0 +1,268 @@
+.vacancy-skeleton {
+  height: 200px;
+  background-image:
+    linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+    linear-gradient( #e3e3e3 25px, transparent 0 ),
+    linear-gradient( #e3e3e3 50px, transparent 0 ),
+    radial-gradient(circle 20px, #e3e3e3 99%, transparent 0 ),
+    linear-gradient( #e3e3e3 50px, transparent 0 ),
+    linear-gradient( #e3e3e3 50px, transparent 0 );
+
+  background-repeat: no-repeat;
+  background-size:
+    50px 200px, /* highlight */
+    100% 20px,
+    55% 20px,
+    50px 40px,
+    37% 14px,
+    65% 16px;
+
+  background-position:
+    0px 0px, /* highlight */
+    0px 0px,
+    0px 30px,
+    0px 100px,
+    60px 103px,
+    60px 123px;
+
+  background-origin: content-box;
+  opacity: 0.5;
+  animation: vacansy-shine 0.8s infinite;
+  cursor: auto;
+
+
+  @include tablet-start {
+    height: 190px;
+    background-image:
+      linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+      linear-gradient( #e3e3e3 25px, transparent 0 ),
+      linear-gradient( #e3e3e3 50px, transparent 0 ),
+      radial-gradient(circle 20px, #e3e3e3 99%, transparent 0 ),
+      linear-gradient( #e3e3e3 50px, transparent 0 ),
+      linear-gradient( #e3e3e3 50px, transparent 0 );
+
+    background-repeat: no-repeat;
+    background-size:
+      50px 190px, /* highlight */
+      100% 20px,
+      55% 20px,
+      50px 40px,
+      37% 14px,
+      65% 16px;
+
+    background-position:
+      0px 0px, /* highlight */
+      0px 0px,
+      0px 30px,
+      0px 100px,
+      60px 103px,
+      60px 123px;
+
+    opacity: 0.5;
+    animation: vacansy-shine 0.8s infinite;
+  }
+
+  @include desktop-start {
+    height: 236px;
+    background-image:
+      linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+      linear-gradient( #e3e3e3 25px, transparent 0 ),
+      linear-gradient( #e3e3e3 50px, transparent 0 ),
+      radial-gradient(circle 24px, #e3e3e3 99%, transparent 0 ),
+      linear-gradient( #e3e3e3 50px, transparent 0 ),
+      linear-gradient( #e3e3e3 50px, transparent 0 );
+
+    background-repeat: no-repeat;
+    background-size:
+      50px 236px, /* highlight */
+      100% 25px,
+      55% 25px,
+      50px 50px,
+      37% 16px,
+      65% 18px;
+
+    background-position:
+      0px 0px, /* highlight */
+      0px 0px,
+      0px 40px,
+      0px 123px,
+      60px 125px,
+      60px 155px;
+
+    opacity: 0.5;
+    animation: vacansy-shine 1s infinite;
+  }
+}
+
+@keyframes vacansy-shine {
+
+  to {
+    background-position: 130% 0px, /* highlight */
+    0px 0px,
+    0px 30px,
+    0px 100px,
+    60px 103px,
+    60px 123px;
+  }
+}
+
+@include tablet-start {
+  @keyframes vacansy-shine {
+
+    to {
+      background-position:
+        130% 0px, /* highlight */
+        0px 0px,
+        0px 30px,
+        0px 100px,
+        60px 103px,
+        60px 123px;
+    }
+  }
+}
+
+@include desktop-start {
+  @keyframes vacansy-shine {
+
+    to {
+      background-position:
+      100% 0px, /* highlight */
+      0px 0px,
+      0px 40px,
+      0px 123px,
+      60px 125px,
+      60px 155px;
+    }
+  }
+}
+
+
+
+.vacancy-search-skeleton {
+  height: 200px;
+  background-image:
+    linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+    linear-gradient( #e3e3e3 25px, transparent 0 ),
+    linear-gradient( transparent 50px, transparent 0 ),
+    linear-gradient( #e3e3e3 50px, transparent 0 ),
+    linear-gradient( #e3e3e3 50px, transparent 0 );
+
+  background-repeat: no-repeat;
+  background-size:
+    50px 200px, /* highlight */
+    100% 20px,
+    55% 20px,
+    65% 16px,
+    32px 32px;
+
+  background-position:
+    0px 0px, /* highlight */
+    0px 0px,
+    0px 30px,
+    0px 125px,
+    right 0px top 115px;
+
+  border: 1px solid lightgrey;
+  background-origin: content-box;
+  opacity: 0.5;
+  animation: search-shine 0.8s infinite;
+  cursor: auto;
+
+
+  @include tablet-start {
+    height: 190px;
+    background-image:
+      linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+      linear-gradient( #e3e3e3 25px, transparent 0 ),
+      linear-gradient( transparent 50px, transparent 0 ),
+      linear-gradient( #e3e3e3 50px, transparent 0 ),
+      linear-gradient( #e3e3e3 50px, transparent 0 );
+
+    border: 1px solid lightgrey;
+    background-repeat: no-repeat;
+    background-size:
+      50px 190px, /* highlight */
+      100% 20px,
+      55% 20px,
+      65% 16px,
+      26px 26px;
+
+    background-position:
+      0px 0px, /* highlight */
+      0px 0px,
+      0px 30px,
+      0px 120px,
+      right 0px top 110px;
+
+    opacity: 0.5;
+    animation: search-shine 0.8s infinite;
+  }
+
+  @include desktop-start {
+    height: 236px;
+    background-image:
+      linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+      linear-gradient( #e3e3e3 25px, transparent 0 ),
+      linear-gradient( transparent 50px, transparent 0 ),
+      linear-gradient( #e3e3e3 50px, transparent 0 ),
+      linear-gradient( #e3e3e3 50px, transparent 0 );
+
+    border: 1px solid lightgrey;
+    background-repeat: no-repeat;
+    background-size:
+      50px 236px, /* highlight */
+      100% 25px,
+      55% 25px,
+      65% 16px,
+      32px 32px;
+
+    background-position:
+      0px 0px, /* highlight */
+      0px 0px,
+      0px 40px,
+      0px 158px,
+      right 0px top 143px;
+
+    opacity: 0.5;
+    animation: search-shine 1s infinite;
+  }
+}
+
+@keyframes search-shine {
+
+  to {
+    background-position: 130% 0px, /* highlight */
+    0px 0px,
+    0px 30px,
+    0px 125px,
+    right 0px top 115px;
+  }
+}
+
+@include tablet-start {
+  @keyframes search-shine {
+
+    to {
+      background-position:
+        130% 0px, /* highlight */
+        0px 0px,
+        0px 30px,
+        0px 120px,
+        right 0px top 110px;
+    }
+  }
+}
+
+@include desktop-start {
+  @keyframes search-shine {
+
+    to {
+      background-position:
+        100% 0px, /* highlight */
+        0px 0px,
+        0px 40px,
+        0px 158px,
+        right 0px top 143px;
+    }
+  }
+}

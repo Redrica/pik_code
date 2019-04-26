@@ -1,0 +1,22 @@
+// Стили блока с кнопками поделиться в социальных сетях
+
+.share__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include tablet-start {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.share__item {
+  margin-bottom: 16px;
+
+  @include tablet-start {
+    margin-right: 17px;
+  }
+}

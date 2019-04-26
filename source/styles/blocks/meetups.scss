@@ -1,0 +1,60 @@
+// Стили секции Мероприятия (блока карточек на странице Мероприятия)
+
+.meetups {
+  @include mobile-wide {
+    padding-bottom: 72px;
+  }
+
+  @include desktop-start {
+    padding-bottom: 200px;
+  }
+}
+
+.meetups__list {
+  margin-top: 28px;
+  margin-right: -16px;
+  margin-left: -16px;
+
+  @include mobile-wide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+    border-top: 1px solid $card-border-color;
+    border-left: 1px solid $card-border-color;
+  }
+
+  @include tablet-start {
+    justify-content: flex-start;
+  }
+
+  @include tablet-layout {
+    margin-top: 32px;
+  }
+
+  @include desktop-start {
+    margin-top: 24px;
+  }
+}
+
+.meetups__card {
+  margin: 0;
+  border-top: 1px solid $card-border-color;
+  border-bottom: 1px solid $card-border-color;
+  border-right: 1px solid #d8d8d8;
+
+  //&:nth-child(n + 8):not(.meetups__card--design) {
+  //  display: none;
+  //}
+
+  @include tablet-layout {
+    border: 0;
+    border-right: 1px solid $card-border-color;
+    border-bottom: 1px solid $card-border-color;
+    //
+    //&:nth-child(n + 8):not(.meetups__card--design) {
+    //  display: block;
+    //}
+  }
+}

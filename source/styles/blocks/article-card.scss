@@ -1,0 +1,162 @@
+// Стили карточки статьи на странице Блог
+
+.article-card {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @include desktop-start {
+    width: 1200px;
+  }
+}
+
+.article-card--right {
+  @include tablet-layout {
+    flex-direction: row-reverse;
+  }
+}
+
+.article-card__title {
+  order: 2;
+  margin: 0;
+  margin-right: 20px;
+  margin-bottom: 11px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 34px;
+
+  @include tablet-layout {
+    order: 1;
+    width: 48.93%;
+    margin-right: 51.07%;
+    margin-bottom: 21px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 26px;
+    font-size: 26px;
+  }
+}
+
+.article-card__title--big {
+  @include tablet-layout {
+    order: 2;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 28px;
+  }
+
+  @include desktop-start {
+    padding-top: 9px;
+  }
+}
+
+.article-card__link {
+  text-decoration: none;
+  color: $black-main;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.article-card__link--picture {
+  display: block;
+  order: 1;
+  margin-bottom: 20px;
+  transition-duration: 0.7s;
+
+  @include tablet-layout {
+    order: 2;
+    margin: 0;
+  }
+}
+
+.article-card__link--picture-big {
+  @include tablet-layout {
+    order: 1;
+    margin-bottom: 27px;
+  }
+}
+
+.article-card__image {
+  display: block;
+  border-radius: 8px;
+
+  @include tablet-layout {
+    border-radius: 0;
+  }
+}
+
+.article-card__column {
+  order: 3;
+  width: 100%;
+
+  @include tablet-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 474px);
+    padding-top: 2px;
+  }
+
+  @include desktop-start {
+    width: calc(100% - 632px);
+    padding-top: 3px;
+  }
+}
+
+.article-card__column--big {
+  @include tablet-layout {
+    order: 3;
+    width: 100%;
+    min-height: 0;
+  }
+}
+
+.article-card__text {
+  display: none;
+  margin: 0;
+
+  @include tablet-start {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  @include desktop-start {
+    font-size: 22px;
+    line-height: 34px;
+  }
+}
+
+.article-card__text--fix {
+  @include desktop-start {
+    line-height: 26px;
+  }
+}
+
+.article-card__data {
+  @include tablet-layout {
+    margin-top: 14px;
+  }
+}
+
+.article-card__data--big {
+  @include tablet-layout {
+    margin-top: 19px;
+  }
+}

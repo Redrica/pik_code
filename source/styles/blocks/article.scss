@@ -1,0 +1,35 @@
+// Стили самой секции статьи ~ страница Статья
+
+.article {
+  padding-bottom: 48px;
+
+  @include tablet-layout {
+    padding-bottom: 58px;
+  }
+
+  @include desktop-start {
+    padding-bottom: 185px;
+  }
+}
+
+.article__header {
+  @include tablet-layout {
+    margin-bottom: 40px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 56px;
+  }
+}
+
+.article__share {
+  max-width: 343px;
+  margin: 0 auto;
+  margin-top: 37px;
+
+  @include tablet-start {
+    max-width: none;
+    margin: 0;
+    margin-top: 44px;
+  }
+}

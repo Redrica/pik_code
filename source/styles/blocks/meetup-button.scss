@@ -1,0 +1,74 @@
+// Стили кнопки в карточке мероприятия
+
+.meetup-button {
+  display: inline-block;
+  max-width: 450px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid transparent;
+  background-color: $blue-main;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+
+  @include tablet-start {
+    max-width: 350px;
+    padding-bottom: 13px;
+  }
+
+  @include tablet-layout {
+    margin-top: auto;
+    padding-top: 13px;
+  }
+
+  @include desktop-start {
+    max-width: 328px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  &:hover[href],
+  &:focus[href] {
+    background-color: $meetup-button-hover;
+  }
+
+  &:active[href] {
+    background-color: $meetup-button-pressed;
+  }
+}
+
+.meetup-button--disabled {
+  padding-top: 13px;
+  padding-bottom: 12px;
+  font-size: 22px;
+  color: $meetup-text-close;
+  border: 1px solid $meetup-text-close;
+  background-color: transparent;
+
+  @include mobile-wide {
+    font-size: 18px;
+  }
+
+  @include tablet-start {
+    padding-bottom: 13px;
+  }
+
+  @include tablet-layout {
+    font-size: 18px;
+  }
+
+  @include desktop-start {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+}

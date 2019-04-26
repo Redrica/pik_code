@@ -1,0 +1,152 @@
+// стили для блока объявления о чемпионате
+
+// основная обертка
+.promo {
+  width: calc(100% + 32px);
+  padding: 43px 16px 23px;
+  background-image: linear-gradient(to right, $blue-dark-secondary 120px, $blue-main 120px);
+  transform: translate(-16px, 0);
+
+  @include tablet-start {
+    width: calc(100% + 96px);
+    padding: 44px 48px 52px;
+    background-image: linear-gradient(to right, $blue-dark-secondary 262px, $blue-main 262px);
+    transform: translate(-48px, 0);
+  }
+
+  @include desktop-start {
+    position: relative;
+    width: 100%;
+    padding: 59px 70px 2px;
+    background-image: linear-gradient(to right, $blue-dark-secondary 310px, $blue-main 310px);
+    transform: none;
+
+    // боковые части фона
+    &::before {
+      position: absolute;
+      top: 0;
+      left: calc((1200px - 100vw) / 2);
+      content: "";
+      display: block;
+      width: calc((100vw - 1200px) / 2);
+      height: 100%;
+      background-color: $blue-spot;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: calc((1200px - 100vw) / 2);
+      content: "";
+      display: block;
+      width: calc((100vw - 1200px) / 2);
+      height: 100%;
+      background-color: $blue-main;
+    }
+  }
+
+  // основной текст
+  &__text {
+    @include text(18px, 32px, 400);
+
+    margin: 0 0 2px;
+    color: $white-main;
+
+    @include tablet-start {
+      font-size: 22px;
+      line-height: 42px;
+    }
+
+    @include desktop-start {
+      font-size: 24px;
+      line-height: 48px;
+    }
+
+    // внутренняя часть
+    &--inner {
+      position: relative;
+      max-width: 370px;
+      margin-bottom: 0;
+      padding-left: 21px;
+      line-height: 34px;
+
+      @include mobile-wide {
+        max-width: initial;
+      }
+
+      @include tablet-start {
+        width: auto;
+        padding-left: 26px;
+        line-height: 44px;
+      }
+
+      @include desktop-start {
+        margin-bottom: 4px;
+        padding-left: 28px;
+        line-height: 48px;
+      }
+
+      &::before {
+        position: absolute;
+        top: 7px;
+        left: 0;
+        content: "";
+        display: block;
+        width: 2px;
+        height: 80px;
+        background-color: $white-main;
+
+        @include tablet-start {
+          top: 5px;
+          left: 11px;
+        }
+
+        @include desktop-start {
+          top: 20px;
+          height: 60px;
+        }
+      }
+    }
+
+    // закомментированный текст
+    &--comment {
+      margin-top: 22px;
+      color: transparentize($white-main, 0.3);
+
+      @include tablet-start {
+        margin-top: 18px;
+      }
+
+      @include desktop-start {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  // цветное выделение тегов в тексте
+  &__highlighted {
+    &--cyan {
+      color: $cyan-code;
+    }
+
+    &--pink {
+      color: $pink-code;
+    }
+  }
+
+  // кнопка перехода на страницу записи на мероприятие
+  &__link {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    transform: translateY(50px);
+
+    @include tablet-start {
+      transform: translateY(80px);
+    }
+
+    @include desktop-start {
+      transform: translateY(35px);
+    }
+  }
+}

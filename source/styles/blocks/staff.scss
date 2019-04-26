@@ -1,0 +1,120 @@
+// Стили страницы сотрудника
+
+.staff {
+  padding-top: 47px;
+  padding-bottom: 48px;
+
+  @include tablet-layout {
+    padding-top: 55px;
+    padding-bottom: 74px;
+  }
+
+  @include desktop-start {
+    padding-top: 115px;
+    padding-bottom: 165px;
+  }
+}
+
+.staff__card {
+  margin-bottom: 32px;
+
+  @include tablet-layout {
+    margin-bottom: 42px;
+  }
+}
+
+.staff__tagline {
+  margin: 0;
+  margin-bottom: 48px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 32px;
+
+  @include tablet-layout {
+    margin-bottom: 24px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 36px;
+    font-size: 26px;
+  }
+}
+
+.staff__vacancies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+
+  @include tablet-layout {
+    margin-bottom: 22px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 20px;
+  }
+}
+
+.staff__vacancy {
+  margin-bottom: 32px;
+
+  @include mobile-wide {
+    width: calc(100% / 2 - 16px);
+    margin-right: 16px;
+
+    &:nth-child(2n + 2) {
+      margin-right: 0;
+    }
+  }
+
+  @include tablet-start {
+    width: calc(100% / 3 - 16px);
+
+    &:nth-child(2n + 2) {
+      margin-right: 16px;
+    }
+
+    &:nth-child(3n + 3) {
+      margin-right: 0;
+    }
+  }
+
+  @include tablet-layout {
+    width: calc(100% / 3 - 20.1px);
+    margin-right: 20px;
+  }
+
+  @include desktop-start {
+    width: calc(100% / 3 - 32.1px);
+    min-width: 379px;
+    margin-right: 32px;
+  }
+
+  &--skel {
+    box-shadow: none;
+  }
+}
+
+.staff__events {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.staff__event {
+  margin-bottom: 32px;
+
+  @include mobile-wide {
+    width: calc(100% / 2 - 16px);
+    margin-right: 16px;
+  }
+
+  @include tablet-start {
+    width: calc(100% / 3 - 20.1px);
+    margin-right: 20px;
+  }
+
+  @include desktop-start {
+    width: calc(100% / 3 - 32.1px);
+    min-width: 379px;
+    margin-right: 32px;
+  }
+}

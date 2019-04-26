@@ -1,0 +1,120 @@
+// Стили панели действий пользователя на страницах Вакансии / Мероприятия
+
+.panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 45px;
+
+  @include tablet-layout {
+    align-items: baseline;
+    padding-top: 53px;
+  }
+
+  @include desktop-start {
+    padding-top: 111px;
+  }
+}
+
+.panel__search {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+
+  @include tablet-start {
+    top: 54px;
+    width: 100%;
+  }
+
+  @include desktop-start {
+    top: 48px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+.panel__title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: normal;
+  color: #212121;
+
+  @include tablet-layout {
+    top: 54px;
+    padding-bottom: 42px;
+  }
+
+  @include desktop-start {
+    padding-bottom: 48px;
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
+
+.panel__button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include desktop-start {
+    width: 32px;
+    height: 32px;
+    margin-top: 5px;
+    margin-right: 0;
+  }
+}
+
+.panel__button--filter {
+  background-image: url("../img/filter.svg");
+
+  @include tablet-layout {
+    display: none;
+  }
+}
+
+.panel__button--filter-active {
+  background-image: url("../img/filter-active.svg");
+}
+
+.panel__button--search {
+  margin-left: 12px;
+  background-image: url("../img/search.svg");
+  opacity: 0.5;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.panel__filter {
+  display: none;
+
+  @include tablet-layout {
+    display: block;
+    width: 100%;
+  }
+
+  @include desktop-start {
+    display: block;
+    width: 100%;
+    margin-top: -5px;
+  }
+}

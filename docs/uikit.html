@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UI kit</title>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+
+<body class="page">
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
+    <!-- inject:svg -->
+    <!-- endinject -->
+  </div>
+
+  <header class="header">
+    <div class="header__wrapper">
+      <nav class="main-nav">
+        <a class="main-nav__logo  logo" href="main.html">
+          <img class="logo__image" src="img/pik-digital-logo.svg" width="124" height="47" alt="Логотип PIK digital">
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page__wrapper">
+    <main class="page__uikit uikit container">
+      <!-- Карточки вакансий -->
+      <section class="uikit__vacancy">
+        <h3 class="uikit__title">Карточка вакансий</h3>
+        <article class="uikit__vacancy-card card">
+          <h3 class="card__title">
+            <a class="card__link" href="vacancy.html" aria-label="Open">Заголовок</a>
+          </h3>
+          <a class="card__team" href="staff.html">
+            <img class="card__image" src="img/novikov.png" width="48" height="48" alt="Аватар сотрудника">
+            <div class="card__info">
+              <p class="card__tagline">Текст 1</p>
+              <p class="card__name">Текст 2</p>
+            </div>
+          </a>
+        </article>
+        <h3 class="uikit__title">Карточка вакансий контурная</h3>
+        <article class="uikit__vacancy-card card card--search">
+          <a class="card__link card__link--search" href="search.html" aria-label="Open">
+            <h3 class="card__title card__title--search">Не нашли вакансии?</h3>
+            <p class="card__name card__name--search">Вам сюда</p>
+          </a>
+        </article>
+        <h3 class="uikit__title">Карточка на странице сотрудника</h3>
+        <article class="staff__vacancy card card--staff">
+            <a class="card__link card__link--staff" href="vacancy.html" aria-label="Open">
+              <h3 class="card__title">iOS разработчик</h3>
+            </a>
+        </article>
+      </section>
+      <!-- Карточки мероприятий -->
+      <section class="uikit__meetups">
+        <h2 class="uikit__title">Карточка мероприятий</h2>
+        <h3 class="uikit__subtitle">Регистрация открыта</h3>
+        <article class="uikit__meetup-card meetup">
+          <p class="meetup__date">
+            <time class="meetup__time" datetime="2018-08-23">
+              <span class="meetup__number">12</span>дата</time>
+          </p>
+          <h3 class="meetup__title">
+            <a class="meetup__link" href="event.html">Текст</a>
+          </h3>
+          <a class="meetup__button meetup-button" href="form-register.html" aria-label="Open">Регистрация открыта</a>
+        </article>
+        <h3 class="uikit__subtitle">Ближайшие мероприятия</h3>
+        <article class="uikit__meetup-card meetup meetup--soon">
+          <p class="meetup__date">
+            <time class="meetup__time" datetime="2018-07-30">
+              <span class="meetup__number">12</span>дата</time>
+          </p>
+          <h3 class="meetup__title">
+            <a class="meetup__link" href="event.html">Текст</a>
+          </h3>
+          <a class="meetup__button meetup-button" href="form-register.html" aria-label="Open">Регистрация открыта</a>
+        </article>
+        <h3 class="uikit__subtitle">Регистрация закрыта или скоро откроется</h3>
+        <article class="uikit__meetup-card meetup meetup--close">
+          <p class="meetup__date">
+            <time class="meetup__date meetup__date--close" datetime="2018-06-28">
+              <span class="meetup__number meetup__number--close">12</span>дата</time>
+          </p>
+          <h3 class="meetup__title meetup__title--close">
+            <a class="meetup__link meetup__link--disabled">Текст</a>
+          </h3>
+          <a class="meetup__button meetup-button meetup-button--disabled" aria-disabled="true">Регистрация закрыта</a>
+        </article>
+      </section>
+      <!-- Кнопка в карточке мероприятия -->
+      <section class="uikit__button-meetup">
+        <h2 class="uikit__title">Кнопка в мероприятиях</h2>
+        <a class="meetup__button meetup-button uikit__meetup-button" href="form-register.html">Регистрация открыта</a>
+        <a class="meetup__button meetup-button uikit__meetup-button meetup-button--disabled" aria-disabled="true">Регистрация закрыта</a>
+      </section>
+      <!-- Кнопка поделиться в социальных сетях -->
+      <section class="uikit__button-share">
+        <h2 class="uikit__title">Кнопка поделиться</h2>
+        <a class="share__link share-button share-button--fb" href="#" aria-label="Open">
+          <span class="share-button__text">Поделиться</span>
+        </a>
+      </section>
+      <!-- Кнопка в фильтре (чипсы) -->
+      <section class="uikit__chips">
+        <h2 class="uikit__title">Чипсы</h2>
+        <button class="filter__button chip chip--active" type="button" aria-label="Check">
+          <span class="chip__fix">Текст на чипсе</span>
+        </button>
+      </section>
+      <!-- Поле поиска -->
+      <section class="uikit__search">
+        <h2 class="uikit__title">Поиск</h2>
+        <h3 class="uikit__subtitle">Закрыт</h3>
+        <!-- Закрытый вариант поля поиска - раскрывается при вводе -->
+        <div class="modal-search uikit__search">
+          <form class="modal-search__form" action="#" method="get">
+            <label for="site_search">
+              <span class="visually-hidden">Поиск по вакансиям</span>
+            </label>
+            <input class="modal-search__field" type="search" name="search" id="site_search" placeholder="Поиск по вакансиям" autocomplete="off">
+            <button class="modal-search__close" type="button">
+              <span class="visually-hidden" aria-label="Close">Закрыть поиск</span>
+            </button>
+          </form>
+          <!--Карточки для демонстрации поиска-->
+          <div class="modal-search__list modal-search__hidden">
+            <article class="modal-search__card card card--result">
+              <h3 class="card__title card__title--result">
+                <a class="card__link card__link--result" href="vacancy.html" aria-label="Open">Дизайнер интерфейсов/Дизайнер&nbsp;цифровых продуктов</a>
+              </h3>
+              <a class="card__team card__team--result" href="staff.html">
+                <img class="card__image" src="img/izmailov.png" width="48" height="48" alt="Аватар Александра Измайлова">
+                <div class="card__info">
+                  <p class="card__tagline">В команду</p>
+                  <p class="card__name">Александра Измайлова</p>
+                </div>
+              </a>
+            </article>
+            <article class="modal-search__card card card--result card--last">
+              <h3 class="card__title card__title--result">
+                <a class="card__link card__link--result" href="vacancy.html" aria-label="Open">Дизайнер-стажер</a>
+              </h3>
+              <a class="card__team card__team--result" href="staff.html">
+                <img class="card__image" src="img/golovacheva.png" width="48" height="48" alt="Аватар Елены Головачовой">
+                <div class="card__info">
+                  <p class="card__tagline">В команду</p>
+                  <p class="card__name">Елены Головачовой</p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+        <h3 class="uikit__subtitle">Открыт</h3>
+        <!-- Открытая версия поля поиска -->
+        <div class="modal-search uikit__search">
+          <form class="modal-search__form" action="#" method="get">
+            <label for="site_search">
+              <span class="visually-hidden">Поиск по вакансиям</span>
+            </label>
+            <input class="modal-search__field uikit-search__field--demo" type="search" name="search" placeholder="Поиск по вакансиям"
+              autocomplete="off">
+            <button class="modal-search__close" type="button">
+              <span class="visually-hidden" aria-label="Close">Закрыть поиск</span>
+            </button>
+          </form>
+          <!--Карточки для демонстрации поиска-->
+          <div class="modal-search__list">
+          <article class="modal-search__card card card--result">
+            <h3 class="card__title card__title--result">
+              <a class="card__link card__link--result" href="vacancy.html" aria-label="Open">Дизайнер интерфейсов/Дизайнер&nbsp;цифровых продуктов</a>
+            </h3>
+            <a class="card__team card__team--result" href="staff.html">
+              <img class="card__image" src="img/izmailov.png" width="48" height="48" alt="Аватар Александра Измайлова">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Александра Измайлова</p>
+              </div>
+            </a>
+          </article>
+          <article class="modal-search__card card card--result card--last">
+            <h3 class="card__title card__title--result">
+              <a class="card__link card__link--result" href="vacancy.html" aria-label="Open">Дизайнер-стажер</a>
+            </h3>
+            <a class="card__team card__team--result" href="staff.html">
+              <img class="card__image" src="img/golovacheva.png" width="48" height="48" alt="Аватар Елены Головачовой">
+              <div class="card__info">
+                <p class="card__tagline">В команду</p>
+                <p class="card__name">Елены Головачовой</p>
+              </div>
+            </a>
+          </article>
+          </div>
+        </div>
+      </section>
+      <!-- Кнопки -->
+      <section class="uikit__buttons">
+        <h2 class="uikit__title">Кнопки</h2>
+        <a class="uikit__button-main button button--blue" href="#">Текст на кнопке</a>
+        <a class="uikit__button-main button button--violet" href="#">Текст на кнопке</a>
+        <a class="uikit__button-main button button--file" href="#">Текст на кнопке</a>
+      </section>
+      <!-- Карточка новостей -->
+      <section class="uikit__blog-card">
+        <h2 class="uikit__title">Карточка новостей</h2>
+        <p class="uikit__comment">К странице должен быть подключен файл text-cut.min.js</p>
+        <div class="blog-card">
+          <div class="blog-card__container">
+            <picture class="blog-card__picture">
+              <source media="(min-width: 1296px)" srcset="img/blog_react-meetup_desktop.jpg 1x, img/blog_react-meetup_desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/blog_react-meetup_tablet.jpg 1x, img/blog_react-meetup_tablet@2x.jpg 2x">
+              <img class="blog-card__image" src="img/blog_react_meetup_mobile.jpg" srcset="img/blog_react_meetup_mobile@2x.jpg 2x" width="343"
+                height="216" alt="React Moscow Meetup">
+            </picture>
+            <h3 class="blog-card__title"><a class="blog-card__link" href="#">Заголовок заголовок заголовок заголовок</a></h3>
+            <p class="blog-card__text">В файле с разметкой можно увидеть, что в этой карточке значительно больше текста, но лишнее обрезается и заменяется
+              на многоточие. Для этого к странице должен быть подключен файл text-cut.min.js</p>
+            <a class="blog-card__author  person" href="staff.html">
+              <img class="person__image  avatar" src="img/derendyaev.png" width="140" height="140" alt="Паша Дерендяев">
+              <p class="person__name  person__name--blue">Паша Дерендяев</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Чекбокс -->
+      <section class="uikit__checkbox">
+        <h2 class="uikit__title">Чекбокс</h2>
+        <div class="input-checkbox">
+          <input class="input-checkbox__input  visually-hidden" type="checkbox" id="test_ok">
+          <label class="input-checkbox__description" for="test_ok">Нажми на меня</label>
+        </div>
+      </section>
+      <!-- Текстовое поле в форме -->
+      <section class="uikit__field">
+        <h2 class="uikit__title">Текстовое поле</h2>
+        <p class="uikit__comment">Ширина текстового поля определяется для блока как для элемента родителя</p>
+        <p class="uikit__comment">К странице должен быть подключен файл input-field.min.js</p>
+        <div class="uikit__input-field input-field">
+          <input class="input-field__input" type="tel" id="id1" autocomplete="tel" required>
+          <label class="input-field__description" for="id1">Телефон</label>
+          <b class="input-field__helper">Поле обязательно для заполнения. Это пример хелпера</b>
+        </div>
+        <p class="uikit__comment">Cостояние ошибки &lt;input class="input-field__input input-field__input--error"&gt;</p>
+        <div class="uikit__input-field input-field">
+          <input class="input-field__input input-field__input--error" type="tel" id="id2" autocomplete="tel" required>
+          <label class="input-field__description input-field__description--oninput" for="id2">Телефон</label>
+          <b class="input-field__helper">Поле обязательно для заполнения. Это пример хелпера</b>
+        </div>
+      </section>
+      <section class="uikit__icons">
+        <h2 class="uikit__title">Пиктограммы</h2>
+        <div class="uikit__icon-wrapper">
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link  social__link--fb" href="#">
+                <span class="visually-hidden">PIK-digital на Фейсбук</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link  social__link--vk" href="#">
+                <span class="visually-hidden">PIK-digital ВКонтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link  social__link--tw" href="#">
+                <span class="visually-hidden">PIK-digital в Твиттере</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="uikit__icon-wrapper">
+          <img class="uikit__icon" src="img/facebook-ui.svg" width="32" height="32" alt="логотип Facebook">
+          <img class="uikit__icon" src="img/vk.svg" width="32" height="32" alt="логотип Вконтакте">
+          <img class="uikit__icon" src="img/twitter.svg" width="32" height="32" alt="логотип Twitter">
+        </div>
+        <img class="uikit__icon" src="img/arrow.svg" width="32" height="32" alt="стрелка влево">
+        <img class="uikit__icon uikit__icon--gray" src="img/search.svg" width="32" height="32" alt="значок лупы серый">
+        <img class="uikit__icon uikit__icon--black" src="img/search.svg" width="32" height="32" alt="значок лупы черный">
+        <img class="uikit__icon uikit__icon--gray" src="img/search.svg" width="24" height="24" alt="значок лупы серый маленький">
+        <img class="uikit__icon" src="img/cross-gray.svg" width="24" height="24" alt="крестик серый">
+        <img class="uikit__icon" src="img/cross-black.svg" width="24" height="24" alt="крестик черный">
+
+
+      </section>
+      <!-- Примеры текста для демонстрации шрифтов -->
+      <section class="uikit__fonts">
+        <h2 class="uikit__title">Шрифты</h2>
+        <p class="uikit__text uikit__text--h1">Заголовок</p>
+        <p class="uikit__text uikit__text--h2">Заголовок</p>
+        <p class="uikit__text uikit__text--h3">Заголовок</p>
+        <p class="uikit__text uikit__text--h4">Заголовок</p>
+        <p class="uikit__text uikit__text--h5">Заголовок</p>
+        <p class="uikit__text uikit__text--h6">Заголовок</p>
+        <p class="uikit__text uikit__text--div1">Текст</p>
+        <p class="uikit__text uikit__text--div2">Текст</p>
+        <p class="uikit__text uikit__text--div3">Текст</p>
+        <p class="uikit__text uikit__text--div4">Текст</p>
+        <p class="uikit__text uikit__text--div5">Текст</p>
+        <p class="uikit__text uikit__text--div6">Текст</p>
+        <div class="uikit__text-wrapper">
+          <p class="uikit__text uikit__text--div7">Текст</p>
+          <p class="uikit__text uikit__text--div7 uikit__text--gray">Текст</p>
+        </div>
+        <div class="uikit__text-wrapper">
+          <p class="uikit__text uikit__text--div8">Текст</p>
+          <p class="uikit__text uikit__text--div8 uikit__text--main-gray">Текст</p>
+          <p class="uikit__text uikit__text--div8 uikit__text--gray">Текст</p>
+        </div>
+        <div class="uikit__text-wrapper">
+          <p class="uikit__text uikit__text--div9">Текст</p>
+          <p class="uikit__text uikit__text--div9 uikit__text--blue">Текст</p>
+        </div>
+        <div class="uikit__text-wrapper">
+          <p class="uikit__text uikit__text--div10 uikit__text--gray">Текст</p>
+          <p class="uikit__text uikit__text--div10 uikit__text--red">Текст</p>
+        </div>
+        <div class="uikit__text-wrapper">
+          <p class="uikit__text uikit__text--div11">Текст</p>
+          <p class="uikit__text uikit__text--div11 uikit__text--gray">Текст</p>
+          <p class="uikit__text uikit__text--div11 uikit__text--red">Текст</p>
+        </div>
+        <div class="uikit__text-wrapper">
+          <a class="uikit__text uikit__text--div12">Ссылка</a>
+          <a class="uikit__text uikit__text--div12 uikit__text--gray">Ссылка</a>
+        </div>
+        <div class="uikit__text-wrapper">
+          <a class="uikit__text uikit__text--div13 uikit__text--blue">Ссылка</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a class="footer__logo  logo">
+        <img class="logo__image" src="img/pik-digital-logo.svg" width="104" height="40" alt="Логотип PIK digital">
+      </a>
+      <div class="footer__info">
+        <p class="footer__text">ООО "ПИК Технологии" 2018</p>
+        <p class="footer__text">
+          <a class="footer__link" href="tel:79453474343">+ 7 (945) 347-43-43</a>
+        </p>
+      </div>
+      <ul class="footer__social  social">
+        <li class="social__item">
+          <a class="social__link  social__link--fb" href="#">
+            <span class="visually-hidden">PIK-digital на Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--vk" href="#">
+            <span class="visually-hidden">PIK-digital ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--tw" href="#">
+            <span class="visually-hidden">PIK-digital в Твиттере</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/uikit.min.js"></script>
+  <script src="js/text-cut.min.js"></script>
+  <script src="js/input-field.min.js"></script>
+
+</body>
+
+</html>

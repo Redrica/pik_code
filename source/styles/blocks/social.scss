@@ -1,0 +1,41 @@
+// стили для кнопок соцсетей в футере
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  // ссылки на соцсети
+  &__link {
+    display: block;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include tablet-start {
+      width: 40px;
+      height: 40px;
+      background-size: 40px 40px;
+    }
+
+    &--fb {
+      background-image: url("../img/facebook-footer.svg");
+    }
+
+    &--vk {
+      background-image: url("../img/vk-footer.svg");
+    }
+
+    &--tw {
+      background-image: url("../img/twitter-footer.svg");
+    }
+  }
+}

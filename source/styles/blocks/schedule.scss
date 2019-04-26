@@ -1,0 +1,207 @@
+// стили для блока расписания мероприятия
+
+.schedule {
+  padding: 0 0 0 32px;
+  list-style: none;
+
+  @include tablet-start {
+    padding-left: 0;
+  }
+
+  // пункт расписания
+  &__item {
+    padding-bottom: 23px;
+
+    @include tablet-start {
+      display: flex;
+      align-items: flex-start;
+      padding-bottom: 36px;
+    }
+
+    @include desktop-start {
+      padding-bottom: 41px;
+    }
+
+    // линейка таймлайна
+    &:not(:last-child) {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 7px;
+        left: -26px;
+        content: "";
+        display: block;
+        width: 4px;
+        height: calc(100% + 8px);
+        background-color: $blue-main;
+
+        @include tablet-start {
+          left: 146px;
+        }
+
+        @include desktop-start {
+          top: 9px;
+          left: 219px;
+        }
+      }
+    }
+  }
+
+  // время проведения
+  &__time {
+    @include text(18px, 1.2em, 500);
+
+    position: relative;
+    margin: 0 0 10px;
+    color: $gray-main;
+
+    @include tablet-start {
+      flex-basis: 140px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      margin-right: 48px;
+      margin-bottom: 0;
+      color: $black-main;
+    }
+
+    @include desktop-start {
+      flex-basis: 218px;
+      margin-top: 4px;
+      margin-right: 66px;
+      font-size: 22px;
+    }
+
+    // точки на таймлайне
+    &::after {
+      position: absolute;
+      top: 5px;
+      left: -32px;
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $blue-main;
+
+      @include tablet-start {
+        top: 2px;
+        right: -16px;
+        left: auto;
+      }
+
+      @include desktop-start {
+        top: 4px;
+        right: -11px;
+      }
+    }
+  }
+
+  // блок информации о докладе
+  &__info {
+    @include desktop-start {
+      max-width: 734px;
+    }
+  }
+
+  // заголовок блока информации
+  &__title {
+    @include text(22px, 32px, 500);
+
+    margin: 0 0 12px;
+
+    @include desktop-start {
+      margin-bottom: 9px;
+      font-size: 26px;
+    }
+  }
+
+  // описание доклада
+  &__text {
+    @include text(18px, 32px, 400);
+
+    margin: 0 0 24px;
+
+    @include tablet-start {
+      line-height: 34px;
+    }
+
+    @include desktop-start {
+      font-size: 22px;
+    }
+  }
+
+  // спикеры
+  &__speakers {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: -4px;
+    margin-bottom: 16px;
+
+    @include desktop-start {
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+  }
+
+  // блок спикера
+  &__person {
+    &:not(:last-child) {
+      margin-right: 40px;
+      margin-bottom: 32px;
+
+      @include tablet-start {
+        margin-right: 54px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // список в описании
+  &__list {
+    margin: 0 0 0;
+    padding: 0 0 0 26px;
+    list-style: none;
+
+    @include tablet-start {
+      margin-top: 31px;
+      margin-bottom: 34px;
+    }
+
+    @include desktop-start {
+      margin-top: -6px;
+      margin-bottom: 30px;
+    }
+  }
+
+  // пункт списка
+  &__list-item {
+    @include text(18px, 32px, 400);
+
+    position: relative;
+    margin: 0 0 24px;
+
+    @include desktop-start {
+      margin-bottom: 12px;
+      font-size: 22px;
+      line-height: 1.2em;
+    }
+
+    &::before {
+      position: absolute;
+      top: 13px;
+      left: -26px;
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $blue-main;
+
+      @include desktop-start {
+        top: 8px;
+      }
+    }
+  }
+}

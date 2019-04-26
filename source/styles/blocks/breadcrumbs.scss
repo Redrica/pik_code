@@ -1,0 +1,21 @@
+// стиль для хлебных крошек
+
+.breadcrumbs {
+  @include text(22px, 28px, 600);
+
+  display: inline-block;
+  text-decoration: none;
+  color: $charcoal;
+
+  @include tablet-start {
+    font-size: 24px;
+  }
+
+  @include desktop-start {
+    font-size: 36px;
+  }
+
+  &--white {
+    color: $white-main;
+  }
+}

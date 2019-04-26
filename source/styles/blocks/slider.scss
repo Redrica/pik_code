@@ -1,0 +1,120 @@
+//стили для слайдера с фотографиями на странице О нас
+
+//тело слайдера
+.slider {
+  text-align: center;
+
+  &__content {
+    position: relative;
+  }
+
+  //одна фотография, обертка picture
+  &__item {
+    display: block;
+    width: calc(100% + 32px);
+    margin-bottom: 10px;
+    line-height: 0;
+    transform: translate(-16px, 0);
+
+    @include tablet-start {
+      width: calc(100% + 96px);
+      margin-bottom: 28px;
+      transform: translate(-48px, 0);
+    }
+
+    @include desktop-start {
+      width: 100%;
+      margin-bottom: 56px;
+      transform: translate(0, 0);
+    }
+  }
+
+  // картинка
+  &__image {
+    width: 100%;
+
+    @include desktop-start {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+  }
+
+  // блок нижних точек-контролов
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    width: 136px;
+    margin: 0 auto;
+    text-align: center;
+
+    @include tablet-start {
+      width: 146px;
+    }
+
+    @include desktop-start {
+      width: 263px;
+    }
+  }
+
+  //одна точка-контрол
+  &__toggle {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: $blue-button-hover;
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    @include tablet-start {
+      width: 10px;
+      height: 10px;
+    }
+
+    @include desktop-start {
+      width: 15px;
+      height: 15px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--active {
+      background-color: $violet-main;
+    }
+  }
+
+  //боковые переключатели
+  &__side-toggle {
+    display: none;
+
+    @include desktop-start {
+      position: absolute;
+      z-index: 1;
+      top: 270px;
+      display: block;
+      width: 62px;
+      height: 65px;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--left {
+      left: -38px;
+      background: url("../img/slider_button_left.svg") no-repeat center;
+    }
+
+    &--right {
+      right: -40px;
+      background: url("../img/slider_button_right.svg") no-repeat center;
+    }
+  }
+}

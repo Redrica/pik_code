@@ -1,0 +1,60 @@
+// Стили карточки тим-лида
+// круглый аватар + "в команду" + имя
+
+.team-card {
+  display: flex;
+  align-items: center;
+}
+
+.team-card__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: $blue-main;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+
+  &:hover[href],
+  &:focus[href] {
+    opacity: 0.7;
+  }
+
+  &:active[href] {
+    opacity: 0.3;
+  }
+}
+
+.team-card__image {
+  display: block;
+  margin-right: 16px;
+  border: solid 1px $page-color;
+  border-radius: 50px;
+  box-shadow: 0 0 0 2px $blue-main;
+
+  @include desktop-start {
+    margin-right: 29px;
+  }
+}
+
+.team-card__tagline {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #80879f;
+}
+
+.team-card__name {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: $blue-main;
+
+  @include tablet-layout {
+    font-size: 18px;
+  }
+
+  @include desktop-start {
+    font-size: 22px;
+  }
+}

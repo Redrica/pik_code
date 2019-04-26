@@ -1,0 +1,67 @@
+//стилия блоков главной страницы
+
+.main {
+  padding: 0 16px 76px;
+
+  @include tablet-start {
+    padding: 0 48px 82px;
+  }
+
+  @include desktop-start {
+    padding: 0 0 210px;
+  }
+
+  // основной текст
+  &__text {
+    @include text(18px, 32px, 400);
+
+    margin: 0 0 66px;
+    color: $gray-main;
+
+    @include tablet-layout {
+      margin-bottom: 82px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 136px;
+      font-size: 24px;
+      line-height: 48px;
+    }
+  }
+
+  // блок вакансий
+  &__vacancy {
+    margin-bottom: 111px;
+
+    @include tablet-start {
+      margin-bottom: 95px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 192px;
+    }
+  }
+
+  // блок промо-мероприятия
+  &__promo {
+    margin-bottom: 138px;
+
+    @include tablet-start {
+      margin-bottom: 118px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 225px;
+    }
+  }
+
+  // переопределения для макета скелета загрузки
+  &--skel {
+    .main__text {
+
+      @include desktop-start {
+        line-height: 46px;
+      }
+    }
+  }
+}

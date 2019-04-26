@@ -1,0 +1,25 @@
+// Стили подложки при активации поиска/фильтра
+
+.overlay {
+  position: fixed;
+  z-index: 9;
+  top: 100px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background-color: $overlay-color;
+
+  @include tablet-start {
+    top: 0;
+  }
+}
+
+.overlay--glass {
+  display: block;
+  background-color: transparent;
+}
+
+.overlay--show {
+  display: block;
+}

@@ -1,0 +1,215 @@
+// Стили UI kit
+
+.uikit {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  &__button-main {
+    margin-bottom: 50px;
+  }
+
+  &__input-field {
+    width: 528px;
+  }
+
+  &__comment {
+    margin-bottom: 30px;
+  }
+}
+
+.uikit__title {
+  margin: 0;
+  margin-top: 130px;
+  margin-bottom: 100px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.uikit__subtitle {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-style: normal;
+}
+
+.uikit__search {
+  position: static;
+  left: auto;
+  min-height: 450px;
+  margin: 0;
+  transform: none;
+}
+
+.uikit__vacancy-card {
+  margin-bottom: 40px;
+}
+
+.uikit__meetup-card {
+  margin-bottom: 40px;
+  outline: 1px solid $card-border-color;
+}
+
+.uikit-search__field--demo {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.uikit__meetup-button {
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.uikit__text {
+  margin-right: 30px;
+  font-family: $graphik;
+  font-weight: normal;
+  line-height: normal;
+  color: $black-main;
+}
+
+.uikit__text--h1 {
+  font-size: 76px;
+  font-weight: bold;
+}
+
+.uikit__text--h2 {
+  font-size: 76px;
+  font-weight: 500;
+}
+
+.uikit__text--h3 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.uikit__text--h4 {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.uikit__text--h5 {
+  font-size: 48px;
+  font-weight: 500;
+  color: $blue-main;
+}
+
+.uikit__text--h6 {
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 72px;
+  color: $pink-code;
+}
+
+.uikit__text--div1 {
+  font-size: 38px;
+}
+
+.uikit__text--div2 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 38px;
+}
+
+.uikit__text--div3 {
+  font-size: 30px;
+  line-height: 56px;
+  color: $gray-main;
+}
+
+.uikit__text--div4 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.uikit__text--div5 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 34px;
+}
+
+.uikit__text--div6 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.uikit__text-wrapper {
+  display: flex;
+  margin: 30px 0;
+}
+
+.uikit__text--div7 {
+  font-size: 24px;
+  font-weight: 400;
+  color: $black-main;
+}
+
+.uikit__text--div8 {
+  font-size: 22px;
+  font-weight: 400;
+  color: $black-main;
+}
+
+.uikit__text--div9 {
+  font-size: 22px;
+  font-weight: 500;
+  color: $black-main;
+}
+
+.uikit__text--div10 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.uikit__text--div11 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.uikit__text--div12 {
+  font-size: 26px;
+  font-weight: 500;
+  text-decoration: none;
+  color: $black-main;
+}
+
+.uikit__text--div13 {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: $black-main;
+}
+
+.uikit__text--main-gray {
+  color: $gray-main;
+}
+
+.uikit__text--gray {
+  color: $meetup-text-close;
+}
+
+.uikit__text--blue {
+  color: $blue-main;
+}
+
+.uikit__text--red {
+  color: $red-error;
+}
+
+.uikit__icon-wrapper {
+  display: inline-block;
+  margin-right: 30px;
+  padding: 0 20px;
+  background-color: $blue-main;
+}
+
+.uikit__icon {
+  margin-right: 20px;
+}
+
+.uikit__icon--gray {
+  opacity: 0.6;
+}
+
+.uikit__icon--black {
+  opacity: 1;
+}

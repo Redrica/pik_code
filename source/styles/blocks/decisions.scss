@@ -1,0 +1,208 @@
+.decisions {
+  padding: 45px 16px 25px;
+
+  @include tablet-start {
+    padding: 53px 48px 32px;
+  }
+
+  @include desktop-start {
+    padding: 112px 0 94px;
+  }
+
+  &__title {
+    @include text(36px, 1.2em, 700);
+
+    margin: 0 0 28px;
+
+    @include tablet-start {
+      margin-bottom: 44px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 76px;
+      font-size: 56px;
+      line-height: 64px;
+    }
+  }
+
+  &__header {
+    position: relative;
+    padding-bottom: 230px;
+    border-bottom: 1px solid #d6d6d6;
+
+    @include tablet-start {
+      padding: 55px 0 70px;
+      background-image: url("../img/extern-back.png");
+      background-repeat: no-repeat;
+      background-position: right 0 bottom 30px;
+      background-size: 350px;
+
+      @include retina-resolution {
+        background-image: url("../img/extern-back@2x.png");
+        background-size: 350px;
+      }
+    }
+
+    @include desktop-start {
+      padding: 109px 0 124px 0;
+      background-image: url("../img/extern-back.png");
+      background-repeat: no-repeat;
+      background-position: right 14px bottom 55px;
+      background-size: 571px;
+
+      @include retina-resolution {
+        background-image: url("../img/extern-back@2x.png");
+        background-size: 571px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: -10px;
+      right: 0;
+      content: "";
+      display: block;
+      width: 50px;
+      height: 50px;
+      background: url("../img/extern-circle.png") no-repeat center center;
+      background-size: cover;
+
+      @include retina-resolution {
+        background-image: url("../img/extern-circle@2x.png");
+      }
+
+      @include tablet-start {
+        right: initial;
+        left: 0;
+      }
+
+      @include desktop-start {
+        top: 0;
+        width: 72px;
+        height: 72px;
+      }
+    }
+
+    &--skel {
+      overflow: hidden;
+      position: relative;
+      padding: 0 0 16px;
+      background: none;
+
+      @include tablet-start {
+        background: none;
+      }
+
+      @include desktop-start {
+        padding: 0 0 16px;
+        background: none;
+      }
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 22px;
+      left: 50%;
+      content: "";
+      display: block;
+      width: 320px;
+      max-width: 450px;
+      height: 180px;
+      background: url("../img/extern-back.png") no-repeat center center;
+      background-size: contain;
+      transform: translate(-50%, 0);
+
+      @include retina-resolution {
+        background-image: url("../img/extern-back@2x.png");
+      }
+
+      @include tablet-start {
+        content: none;
+      }
+    }
+
+    &--skel::after {
+      content: none;
+    }
+  }
+
+  &__subtitle {
+    @include text(24px, 1.2em, 500);
+    margin: 0 0 32px 0;
+
+    @include tablet-start {
+      margin-bottom: 20px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 15px;
+      font-size: 36px;
+      line-height: 32px;
+    }
+  }
+
+  &__text {
+    @include text(20px, 1.2em, 400);
+
+    margin: 0;
+
+    @include tablet-start {
+      width: 45%;
+    }
+
+    @include desktop-start {
+      width: 45%;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 60px 0 0;
+    list-style: none;
+
+    @include tablet-start {
+      align-items: stretch;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-top: 80px;
+    }
+
+    @include desktop-start {
+      padding-top: 104px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 50px;
+
+    @include tablet-start {
+      display: flex;
+      width: calc((100% - 20px) / 2);
+      min-height: 400px;
+      margin-bottom: 80px;
+    }
+
+    @include tablet-layout {
+      width: calc((100% - 40px) / 3);
+    }
+
+    @include desktop-start {
+      width: calc((100% - 64px) / 3);
+      min-height: 531px;
+      margin-bottom: 105px;
+    }
+  }
+}

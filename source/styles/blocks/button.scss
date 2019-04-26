@@ -1,0 +1,96 @@
+// стили для кнопок
+
+.button {
+  @include text(18px, 1.2em, 400);
+
+  display: block;
+  width: 100%;
+  max-width: 343px;
+  padding: 22px 10px 21px;
+  font-family: $graphik;
+  text-align: center;
+  text-decoration: none;
+  color: $white-main;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition-duration: 0.5s;
+
+  @include tablet-start {
+    width: 296px;
+    max-width: none;
+    padding: 18px 32px 17px;
+  }
+
+  @include desktop-start {
+    width: 378px;
+    padding: 25px 32px 25px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  // синяя кнопка
+  &--blue {
+    background-color: $blue-main;
+    box-shadow: 0 8px 20px $blue-shadow;
+
+    &:hover,
+    &:focus {
+      background-color: $blue-button-hover;
+    }
+
+    &:active {
+      background-color: $blue-button-pressed;
+      box-shadow: none;
+    }
+  }
+
+  // фиолетовая кнопка
+  &--violet {
+    background-color: $violet-main;
+    box-shadow: 0 8px 20px $violet-shadow;
+
+    &:hover,
+    &:focus {
+      background-color: $violet-button-hover;
+    }
+
+    &:active {
+      background-color: $violet-button-pressed;
+      box-shadow: none;
+    }
+  }
+
+  // кнопка загрузки файла
+  &--file {
+    font-weight: 400;
+    color: $black-main;
+    background-color: $white-main;
+    box-shadow: inset 0 0 0 1px $black-main;
+
+    @include tablet-start {
+      width: 332px;
+    }
+
+    @include desktop-start {
+      width: 528px;
+      padding: 25px 32px 25px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $chip-bg-hover-color;
+    }
+
+    &:active {
+      background-color: $meetup-text-close;
+    }
+  }
+}

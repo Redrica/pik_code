@@ -1,0 +1,74 @@
+// Стили блока требований вакансий на странице Описание ваканасии
+
+.claims__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 22px;
+  font-weight: 500;
+
+  @include tablet-layout {
+    margin-bottom: 26px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 17px;
+    font-size: 26px;
+  }
+}
+
+.claims__title--place {
+  @include desktop-start {
+    margin-bottom: 25px;
+  }
+}
+
+.claims__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.claims__item {
+  position: relative;
+  margin-bottom: 16px;
+  padding-left: 27px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 32px;
+
+  @include tablet-layout {
+    margin-bottom: 23px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 14px;
+    font-size: 22px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    vertical-align: baseline;
+    border-radius: 50px;
+    background-color: $blue-main;
+  }
+}
+
+.claims__item--plus {
+  margin-bottom: 24px;
+
+  @include desktop-start {
+    margin-bottom: 14px;
+  }
+}
+
+.claims__item--place {
+  @include desktop-start {
+    line-height: 36px;
+  }
+}

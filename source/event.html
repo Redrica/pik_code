@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страница мероприятия</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="page">
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
+    <!-- inject:svg -->
+    <!-- endinject -->
+  </div>
+
+  <header class="header">
+    <div class="header__wrapper">
+      <nav class="main-nav">
+        <a class="main-nav__logo  logo" href="main.html">
+          <img class="logo__image" src="img/pik-digital-logo.svg" width="124" height="47" alt="Логотип PIK digital">
+        </a>
+        <!-- Мобильное меню -->
+        <!-- Описание работы в файле menu.js -->
+        <!-- Активный класс меню  main-nav__link--active -->
+        <button class="main-nav__toggle" aria-label="Открыть меню">
+          <span class="main-nav__burger"></span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="vacancies.html">Вакансии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="blog.html">Блог</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link  main-nav__link--active" href="meetups.html">Мероприятия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Решения</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="about.html">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page__wrapper">
+    <main class="page__main  event">
+      <!-- Шапка раздела Мероприятия -->
+      <header class="event__header">
+        <div class="event__header-wrapper">
+          <a class="event__breadcrumbs  breadcrumbs  breadcrumbs--white" href="#">Мероприятия/</a>
+          <h1 class="event__title">SpbDotNet MeetUp</h1>
+          <p class="event__date">19 июля 19:00</p>
+        </div>
+      </header>
+      <!-- описание мероприятия -->
+      <div class="event__content">
+        <p class="event__subtitle">Санкт-Петербург, Коворкинг «Ясная поляна», Ул. Льва Толстого</p>
+        <p class="event__text">19 июля Альфа-Банк приглашает .NET-разработчиков на открытый meetup в Санкт-Петербурге.</p>
+        <p class="event__text">Мы расскажем о себе и своем коммьюнити разработчиков, поделимся экспертизой и пообщаемся.</p>
+        <h2 class=" event__program">ПРОГРАММА:</h2>
+        <!-- Блок расписания с таймлайном -->
+        <ul class="event__schedule  schedule">
+          <li class="schedule__item">
+            <p class="schedule__time">19:00-19:20</p>
+            <div class="schedule__info">
+              <h3 class="schedule__title">Встреча, общение, знакомство</h3>
+            </div>
+          </li>
+          <li class="schedule__item">
+            <p class="schedule__time">20:20-21:30</p>
+            <div class="schedule__info">
+              <h3 class="schedule__title">Приветственное слово</h3>
+            </div>
+          </li>
+          <li class="schedule__item">
+            <p class="schedule__time">22:30-23:10</p>
+            <div class="schedule__info">
+              <h3 class="schedule__title  schedule__title--kotlin">Kotlin: выходим за рамки JVM</h3>
+              <p class="schedule__text">Рассмотрим мультиплатформенные проекты: их преимущества и недостатки, особенности компиляции под JS, какие
+                существуют инструменты и как их можно использовать.</p>
+              <div class="schedule__speakers">
+                <a class="schedule__person  person" href="staff.html">
+                  <img class="person__image" src="img/pavlov-mobile.png" width="48" height="48" alt="Владислав Павлов">
+                  <p class="person__name">Владислав Павлов</p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="schedule__item">
+            <p class="schedule__time">00:30-01:10</p>
+            <div class="schedule__info">
+              <h3 class="schedule__title">Testcontainers: Oracle inside</h3>
+              <p class="schedule__text">Расскажем о том, как пишем интеграционные тесты для проектов, где используется СУБД Oracle.</p>
+              <div class="schedule__speakers">
+                <a class="schedule__person  person" href="staff.html">
+                  <img class="person__image" src="img/pavlodar.png" width="48" height="48" alt="Игор Павлодар">
+                  <p class="person__name">Игор Павлодар</p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="schedule__item">
+            <p class="schedule__time">02:30-03:10</p>
+            <div class="schedule__info">
+              <h3 class="schedule__title">Кофе-брейк, бургер-пати под открытым небом</h3>
+            </div>
+          </li>
+          <li class="schedule__item">
+            <p class="schedule__time">03:30-04:10</p>
+            <div class="schedule__info">
+              <h3 class="schedule__title">Как жить, если вы неправильно готовите Elasticsearch</h3>
+              <p class="schedule__text">Расскажем про использование Elasticsearch в корпоративном интернет-банке:</p>
+              <ul class="schedule__list">
+                <li class="schedule__list-item">масштабирование и нагрузка</li>
+                <li class="schedule__list-item">собранные грабли</li>
+                <li class="schedule__list-item">пути решения проблем</li>
+              </ul>
+              <div class="schedule__speakers">
+                <a class="schedule__person  person" href="staff.html">
+                  <img class="person__image" src="img/smirnov.png" width="48" height="48" alt="Гриша Иванов">
+                  <p class="person__name">Гриша Иванов</p>
+                </a>
+                <a class="schedule__person  person" href="staff.html">
+                  <img class="person__image" src="img/sergeev.png" width="48" height="48" alt="Никита Колобков">
+                  <p class="person__name">Никита Колобков</p>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <p class="event__text">Приходите познакомиться с нашей командой и послушать наши бэкенд-истории. Мероприятие бесплатное, но регистрация
+          обязательна.</p>
+        <!-- ссылка на страницу регистрации на мероприятие -->
+        <a class="event__link  button  button--violet" href="form-register.html">Заполнить заявку</a>
+
+        <!-- Блок Поделиться в соцсетях -->
+        <div class="event__share  share">
+          <ul class="share__list">
+            <li class="share__item">
+              <a class="share__link share-button share-button--fb" href="#" aria-label="Open">
+                <span class="share-button__text">Поделиться</span>
+              </a>
+            </li>
+            <li class="share__item">
+              <a class="share__link share-button share-button--vk" href="#" aria-label="Open">
+                <span class="share-button__text">Поделиться</span>
+              </a>
+            </li>
+            <li class="share__item">
+              <a class="share__link share-button share-button--twitter" href="#" aria-label="Open">
+                <span class="share-button__text share-button__text--twitter">Твитнуть</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a class="footer__logo  logo">
+        <img class="logo__image" src="img/pik-digital-logo.svg" width="104" height="40" alt="Логотип PIK digital">
+      </a>
+      <div class="footer__info">
+        <p class="footer__text">ООО "ПИК Технологии" 2018</p>
+        <p class="footer__text">
+          <a class="footer__link" href="tel:79453474343">+ 7 (945) 347-43-43</a>
+        </p>
+      </div>
+      <ul class="footer__social  social">
+        <li class="social__item">
+          <a class="social__link  social__link--fb" href="#">
+            <span class="visually-hidden">PIK-digital на Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--vk" href="#">
+            <span class="visually-hidden">PIK-digital ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--tw" href="#">
+            <span class="visually-hidden">PIK-digital в Твиттере</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/menu.min.js"></script>
+  <script src="js/header.min.js"></script>
+
+</body>
+
+</html>

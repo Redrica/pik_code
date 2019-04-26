@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Главная страница</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body class="page">
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
+    <!-- inject:svg -->
+    <!-- endinject -->
+  </div>
+
+  <header class="header  header--main">
+    <div class="header__wrapper">
+      <nav class="main-nav">
+        <a class="main-nav__logo  logo">
+          <img class="logo__image" src="img/pik-digital-logo.svg" width="124" height="47" alt="Логотип PIK digital">
+        </a>
+        <!-- Мобильное меню -->
+        <!-- Описание работы в файле menu.js -->
+        <!-- Активный класс меню  main-nav__link--active -->
+        <button class="main-nav__toggle" aria-label="Открыть меню">
+          <span class="main-nav__burger"></span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="vacancies.html">Вакансии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="blog.html">Блог</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="meetups.html">Мероприятия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Решения</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="about.html">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="page__wrapper">
+    <header class="page__header  page__header--skel">
+      <div class="page__header-wrapper">
+        <h1 class="page__main-title">ИТ на стройке</h1>
+        <a class="page__header-link  button  button--blue" href="#">Посмотреть вакансии</a>
+      </div>
+    </header>
+    <main class="page__main  main  main--skel">
+      <p class="main__text">Мы разрабатываем системы, сайты, мобильные приложения, ботов и хранилища данных, которые помогают нашим коллегам создавать
+        самые лучшие дома. Никто не строит в России больше нас, поэтому мы накапливаем и анализируем данные про стройку.</p>
+      <!-- карточки вакансий -->
+      <section class="main__vacancy  section  section--skel">
+        <h2 class="section__title">Мы ищем</h2>
+        <ul class="section__list">
+          <li class="section__item  card  vacancy-skeleton">
+          </li>
+          <li class="section__item  card  vacancy-skeleton">
+          </li>
+          <li class="section__item  section__item--stretch  card  vacancy-skeleton">
+          </li>
+          <li class="section__item  card  vacancy-skeleton">
+          </li>
+          <li class="section__item  section__item--stretch  card  vacancy-skeleton">
+          </li>
+          <li class="section__item  card  vacancy-skeleton">
+          </li>
+        </ul>
+        <a class="section__link  button  button--blue" href="#">Показать все вакансии</a>
+      </section>
+
+      <!-- промо-секция мероприятия -->
+      <section class="main__promo  section">
+        <h2 class="section__title  section__title--promo">PIK Digital Day</h2>
+        <div class="promo">
+          <p class="promo__text">
+            <span class="promo__highlighted  promo__highlighted--pink">&lt;</span><span class="promo__highlighted  promo__highlighted--cyan">h1</span><span class="promo__highlighted  promo__highlighted--pink">&gt;</span>Приглашаем на чемпионат<span class="promo__highlighted  promo__highlighted--pink">&lt;/</span><span class="promo__highlighted  promo__highlighted--cyan">h1</span><span class="promo__highlighted  promo__highlighted--pink">&gt;</span>
+          </p>
+          <p class="promo__text">
+            <span class="promo__highlighted  promo__highlighted--pink">&lt;</span><span class="promo__highlighted  promo__highlighted--cyan">p</span><span class="promo__highlighted  promo__highlighted--pink">&gt;</span>
+          </p>
+          <p class="promo__text  promo__text--inner">
+            По анализу данных
+            <br> готовых ИТ-решений для строительства
+          </p>
+          <p class="promo__text">
+            <span class="promo__highlighted  promo__highlighted--pink">&lt;/</span><span class="promo__highlighted  promo__highlighted--cyan">p</span><span class="promo__highlighted  promo__highlighted--pink">&gt;</span>
+          </p>
+          <p class="promo__text  promo__text--comment">&lt;!-- 14 июля 2018, Москва --&gt;</p>
+          <a class="promo__link  button  button--violet" href="form-register.html">&lt;/ Участвовать&gt;</a>
+        </div>
+      </section>
+
+      <section class="main__blog  section">
+        <h2 class="section__title">Мы пишем</h2>
+        <ul class="section__list  section__list--blog">
+          <!-- карточка анонса записи, скелет-->
+          <li class="section__item  section__item--blog  blog-card">
+            <div class="blog-card__container  blog-card__container--skel  blog-card-skeleton">
+            </div>
+          </li>
+          <li class="section__item  section__item--blog  blog-card">
+            <div class="blog-card__container  blog-card__container--skel  blog-card-skeleton">
+            </div>
+          </li>
+          <li class="section__item  section__item--blog  blog-card">
+            <div class="blog-card__container  blog-card__container--skel  blog-card-skeleton">
+            </div>
+          </li>
+        </ul>
+        <a class="section__link  section__link--blog  button  button--blue" href="blog.html">Перейти в блог</a>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a class="footer__logo  logo">
+        <img class="logo__image" src="img/pik-digital-logo.svg" width="104" height="40" alt="Логотип PIK digital">
+      </a>
+      <div class="footer__info">
+        <p class="footer__text">ООО "ПИК Технологии" 2018</p>
+        <p class="footer__text">
+          <a class="footer__link" href="tel:79453474343">+ 7 (945) 347-43-43</a>
+        </p>
+      </div>
+      <!-- блок соц.сетей -->
+      <ul class="footer__social  social">
+        <li class="social__item">
+          <a class="social__link  social__link--fb" href="#">
+            <span class="visually-hidden">PIK-digital на Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--vk" href="#">
+            <span class="visually-hidden">PIK-digital ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--tw" href="#">
+            <span class="visually-hidden">PIK-digital в Твиттере</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/menu.min.js"></script>
+  <script src="js/text-cut.min.js"></script>
+  <script src="js/header.min.js"></script>
+</body>
+
+</html>

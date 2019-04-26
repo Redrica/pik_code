@@ -1,0 +1,234 @@
+// стили для страницы Описание мероприятия
+
+.event {
+  // шапка раздела
+  &__header {
+    position: relative;
+    width: 100%;
+    padding: 52px 16px 46px;
+    color: $white-main;
+    background-image:
+      linear-gradient(
+        to right,
+        $blue-spot-header 120px,
+        $blue-spot 120px
+      );
+
+    @include tablet-start {
+      padding: 0;
+      background-color: $blue-spot;
+      background-image: none;
+    }
+
+    @include desktop-start {
+      background-color: $blue-spot;
+      background-image: none;
+
+      // боковые части фона
+      &::before {
+        position: absolute;
+        top: 0;
+        left: calc((1200px - 100vw) / 2);
+        content: "";
+        display: block;
+        width: calc((100vw - 1200px) / 2);
+        height: 100%;
+        background-color: $blue-spot;
+      }
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: calc((1200px - 100vw + 4px) / 2);
+        content: "";
+        display: block;
+        width: calc((100vw - 1200px + 4px) / 2);
+        height: 100%;
+        background-color: $blue-spot;
+      }
+    }
+  }
+
+  // обертка для шапки для контента
+  &__header-wrapper {
+    @include tablet-start {
+      position: relative;
+      padding: 60px 48px 61px;
+    }
+
+    @include desktop-start {
+      padding: 83px 60px 92px 0;
+    }
+
+    &::before {
+      @include tablet-start {
+        position: absolute;
+        top: 0;
+        left: 203px;
+        content: "";
+        width: 155px;
+        height: 100%;
+        background-color: $blue-spot-header;
+      }
+
+      @include desktop-start {
+        left: -91px;
+        width: 317px;
+      }
+    }
+  }
+
+  // злебные крошки
+  &__breadcrumbs {
+    margin-bottom: 32px;
+
+    @include tablet-start {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 59px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 73px;
+    }
+  }
+
+  // заголовок страницы (название мероприятия)
+  &__title {
+    @include text(36px, 52px, 700);
+
+    margin: 0 0 7px;
+
+    @include tablet-start {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 16px;
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 38px;
+      font-size: 56px;
+      line-height: 1.2em;
+    }
+  }
+
+  // дата проведения
+  &__date {
+    @include text(16px, 1.2em, 400);
+
+    margin: 0 0;
+
+    @include tablet-start {
+      position: relative;
+      z-index: 1;
+      font-size: 18px;
+    }
+
+    @include desktop-start {
+      font-size: 36px;
+    }
+  }
+
+  // основной контент страницы
+  &__content {
+    padding: 36px 16px 48px;
+
+    @include tablet-start {
+      padding: 53px 48px 56px;
+    }
+
+    @include desktop-start {
+      padding: 48px 0 184px;
+    }
+  }
+
+  // подзаголовок
+  &__subtitle {
+    @include text(22px, 32px, 600);
+
+    margin: 0 0 23px;
+    color: $charcoal;
+
+    @include desktop-start {
+      font-size: 36px;
+      line-height: 38px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 53px;
+    }
+  }
+
+  // основной текст
+  &__text {
+    @include text(18px, 32px, 400);
+
+    margin: 0 0 2px;
+
+    @include desktop-start {
+      font-size: 22px;
+      line-height: 34px;
+    }
+  }
+
+  &__program {
+    @include text(22px, 32px, 600);
+
+    margin: 49px 0 41px;
+    text-transform: uppercase;
+
+    @include tablet-start {
+      margin-bottom: 46px;
+    }
+
+    @include desktop-start {
+      margin-top: 57px;
+      margin-bottom: 48px;
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+
+  // блок программы мероприятия
+  &__schedule {
+    margin: 0 0 4px;
+
+    @include tablet-start {
+      margin-bottom: 6px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 7px;
+    }
+  }
+
+  // ссылка на страницу отправки заявки
+  &__link {
+    max-width: 343px;
+    margin: 45px auto 50px;
+
+    @include tablet-start {
+      width: 336px;
+      margin: 53px 0 50px;
+    }
+
+    @include desktop-start {
+      width: 528px;
+      max-width: 528px;
+      margin-top: 51px;
+      margin-bottom: 56px;
+    }
+  }
+
+  // блок Поделиться в соцсетях
+  &__share {
+    max-width: 343px;
+    margin: 0 auto;
+
+    @include tablet-start {
+      max-width: none;
+    }
+  }
+}

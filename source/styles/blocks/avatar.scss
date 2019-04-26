@@ -1,0 +1,40 @@
+// аватарка пользователя (круглая картинка)
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border: solid 1px $white-main;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px $blue-main;
+
+  @include desktop-start {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.avatar--article {
+  @include desktop-start {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.avatar--blog {
+  @include desktop-start {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+  }
+}
+
+.avatar--staff {
+  width: 64px;
+  height: 64px;
+
+  @include desktop-start {
+    width: 88px;
+    height: 88px;
+  }
+}

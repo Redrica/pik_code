@@ -1,0 +1,42 @@
+// стили блока с аватаркой и именем ведущего, автора, тимлида
+
+.person {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.5s;
+
+  &__image {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+    border: solid 1px $white-main;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px $blue-main;
+  }
+
+  &__name {
+    @include text(22px, 1.2em, 500);
+
+    margin: 0;
+    color: $black-main;
+
+    @include tablet-start {
+      font-size: 18px;
+    }
+
+    @include desktop-start {
+      font-size: 22px;
+    }
+
+    &--blue {
+      color: $blue-main;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,184 @@
+// стилия для карточки анонса записи в блоге
+
+.blog-card {
+  display: flex;
+
+  @include mobile-wide {
+    width: calc(100% / 2 - 8px);
+  }
+
+  @include tablet-start {
+    // 20.1px - фикс для IE
+    width: calc(100% / 3 - 20.1px);
+    max-width: 296px;
+  }
+
+  @include tablet-layout {
+    width: calc(100% / 3 - 20.1px);
+    max-width: none;
+  }
+
+  @include desktop-start {
+    width: calc(100% / 3 - 32.1px);
+  }
+
+  // обертка
+  &__container {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 16px 23px;
+    text-decoration: none;
+    color: $black-main;
+    border-radius: 12px;
+    background-color: $white-main;
+    box-shadow: $card-shadow;
+    transition-duration: 0.5s;
+
+    @include tablet-start {
+      padding-bottom: 32px;
+    }
+
+    @include desktop-start {
+      padding: 0 32px 32px;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 40px 14px rgba(140, 140, 140, 0.2);
+    }
+
+    &--skel {
+      padding: 0;
+
+      @include tablet-start {
+        padding: 0;
+      }
+
+      @include desktop-start {
+        padding: 0;
+      }
+    }
+
+    &--no-shadow {
+      box-shadow: none;
+    }
+  }
+
+  // главное изображение, обертка picture
+  &__picture {
+    display: block;
+    width: calc(100% + 32px);
+    margin-bottom: 29px;
+    line-height: 0;
+    transform: translate(-16px, 0);
+
+    @include desktop-start {
+      width: calc(100% + 64px);
+      margin-bottom: 32px;
+      transform: translate(-32px, 0);
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  // заголовок записи
+  &__title {
+    @include text(26px, 28px, 500);
+
+    margin: 0 0 32px;
+    transition: 0.5s;
+
+    @include tablet-start {
+      min-height: 56px;
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    @include desktop-start {
+      font-size: 26px;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+
+  // ссылка в заголовке
+  &__link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  // основной текст
+  &__text {
+    @include text(22px, 28px, 400);
+
+    margin: 0 0 36px;
+
+    @include tablet-start {
+      margin-bottom: 29px;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 80px;
+      font-size: 22px;
+    }
+  }
+
+  // блок автора
+  &__author {
+    margin-top: auto;
+  }
+}
+
+.blog-card__link--staff {
+  padding-bottom: 8px;
+
+  @include tablet-start {
+    padding-bottom: 15px;
+  }
+}
+
+.blog-card__container--blog {
+  @include desktop-start {
+    padding: 0;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.blog-card__picture--staff {
+  @include desktop-start {
+    margin-bottom: 37px;
+  }
+}
+
+.blog-card__image--blog {
+  @include desktop-start {
+    height: 216px;
+  }
+}
+
+.blog-card__title--blog {
+  @include desktop-start {
+    margin-bottom: 28px;
+  }
+}
+
+.blog-card__text--blog {
+  @include desktop-start {
+    margin-bottom: 45px;
+    line-height: 34px;
+  }
+}

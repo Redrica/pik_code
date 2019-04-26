@@ -1,0 +1,23 @@
+// Стили блока новостных карточек на странице Блог
+
+.news {
+  display: none;
+
+  @include desktop-start {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.news__item {
+  width: 379px;
+  margin-right: 31.5px;
+
+  &:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+}

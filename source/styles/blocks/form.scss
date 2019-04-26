@@ -1,0 +1,90 @@
+// стили для форм ввода данных
+
+.form {
+
+  // поля ввода
+  &__input {
+    margin-bottom: -2px;
+
+    @include mobile-wide {
+      max-width: 336px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include desktop-start {
+      max-width: 528px;
+      margin-bottom: 30px;
+    }
+
+    // чекбокс и загрузка файла
+    &--checkbox,
+    &--file {
+      max-width: 343px;
+      margin: 49px auto 0;
+
+      @include mobile-wide {
+        max-width: 336px;
+      }
+
+      @include tablet-start {
+        margin-top: 33px;
+      }
+
+      @include desktop-start {
+        max-width: 528px;
+        margin-top: 61px;
+      }
+    }
+
+    &--file {
+      @include desktop-start {
+        margin-top: 39px;
+      }
+    }
+  }
+
+  // кнопка отправки формы
+  &__submit {
+    width: 100%;
+    margin-top: 26px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mobile-wide {
+      width: 336px;
+    }
+
+    @include desktop-start {
+      width: 528px;
+      max-width: 528px;
+      margin-top: 40px;
+    }
+
+    &--event {
+      @include desktop-start {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  // текст согласия на обработку данных
+  &__claims {
+    @include text(12px, 20px, 400);
+
+    margin: 36px auto 0;
+    text-align: center;
+    color: $gray-main;
+
+    @include mobile-wide {
+      width: 332px;
+    }
+
+    @include desktop-start {
+      width: 528px;
+      max-width: 528px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страница сотрудника</title>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <script src="js/picturefill.min.js"></script>
+</head>
+
+<body class="page">
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
+    <!-- inject:svg -->
+    <!-- endinject -->
+  </div>
+
+  <header class="header">
+    <div class="header__wrapper">
+      <nav class="main-nav">
+        <a class="main-nav__logo  logo" href="main.html">
+          <img class="logo__image" src="img/pik-digital-logo.svg" width="124" height="47" alt="Логотип PIK digital">
+        </a>
+        <button class="main-nav__toggle" aria-label="Открыть меню">
+          <span class="main-nav__burger"></span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="vacancies.html">Вакансии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="blog.html">Блог</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="meetups.html">Мероприятия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Решения</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="about.html">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page__wrapper">
+    <main class="page__staff container">
+      <section class="staff">
+
+        <h1 class="visually-hidden staff__title">Страница сотрудника</h1>
+
+        <!--Карточка пользователя: фото + имя-->
+        <div class="staff__card user-card">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/staff-desktop.png">
+            <img class="user-card__avatar user-card__avatar--staff avatar avatar--staff" src="img/staff-mobile.png" alt="Аватар Александра Измайлова">
+          </picture>
+          <p class="user-card__name user-card__name--staff">Александр Измайлов</p>
+        </div>
+        <h2 class="staff__tagline">Работать со мной</h2>
+        <div class="staff__vacancies">
+          <!--Карточка вакансии-->
+          <article class="staff__vacancy card card--staff">
+            <a class="card__link card__link--staff" href="vacancy.html" aria-label="Open">
+              <h3 class="card__title">iOS разработчик</h3>
+            </a>
+          </article>
+          <!--Карточка поиска вакансии-->
+          <article class="staff__vacancy card card--search">
+            <a class="card__link card__link--search" href="search.html" aria-label="Open">
+              <h3 class="card__title">Не нашли вакансии?</h3>
+              <p class="card__name card__name--search">Вам сюда</p>
+            </a>
+          </article>
+        </div>
+        <h2 class="staff__tagline">Делюсь опытом</h2>
+        <!--Карточка новостей-->
+        <div class="staff__events">
+          <article class="staff__event  blog-card">
+            <a class="blog-card__container blog-card__link blog-card__link--staff" href="#">
+              <picture class="blog-card__picture blog-card__picture--staff">
+                <source media="(min-width: 1296px)" srcset="img/blog_conference_desktop.jpg 1x, img/blog_conference_desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/blog_conference_tablet.jpg 1x, img/blog_conference_tablet@2x.jpg 2x">
+                <img class="blog-card__image" src="img/blog_conference_mobile.jpg" srcset="img/blog_conference_mobile@2x.jpg 2x" width="343"
+                  height="216" alt="Конференция ПИК Digital">
+              </picture>
+              <h3 class="blog-card__title">Большие новости большой конференции</h3>
+              <p class="blog-card__text">Большая конференция ПИК Digital в Москве</p>
+            </a c>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a class="footer__logo  logo">
+        <img class="logo__image" src="img/pik-digital-logo.svg" width="104" height="40" alt="Логотип PIK digital">
+      </a>
+      <div class="footer__info">
+        <p class="footer__text">ООО "ПИК Технологии" 2018</p>
+        <p class="footer__text">
+          <a class="footer__link" href="tel:79453474343">+ 7 (945) 347-43-43</a>
+        </p>
+      </div>
+      <ul class="footer__social  social">
+        <li class="social__item">
+          <a class="social__link  social__link--fb" href="#">
+            <span class="visually-hidden">PIK-digital на Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--vk" href="#">
+            <span class="visually-hidden">PIK-digital ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--tw" href="#">
+            <span class="visually-hidden">PIK-digital в Твиттере</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/menu.min.js"></script>
+  <script src="js/text-cut.min.js"></script>
+  <script src="js/header.min.js"></script>
+
+</body>
+
+</html>

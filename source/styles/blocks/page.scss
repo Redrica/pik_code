@@ -1,0 +1,333 @@
+// Каркас старницы
+
+.page {
+  width: 100%;
+  min-width: 320px;
+
+  // обертка для контентной части
+  &__wrapper {
+    flex-grow: 1;
+    background-color: $white-main;
+
+    @include tablet-start {
+      padding-top: 80px;
+    }
+
+    @include desktop-start {
+      padding-top: 84px;
+    }
+  }
+
+  // класс для фиксации контента при появлении меню на мобильной версии
+  &--noscroll {
+    position: fixed;
+    overflow-y: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  &--modal {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+  }
+
+  // заголовок страницы на главной
+  &__header {
+    position: relative;
+    width: 100%;
+    margin-bottom: 35px;
+    padding: 53px 16px 371px;
+    background-color: $blue-main;
+    background-image: url("../img/header_back_mobile.png");
+    background-repeat: no-repeat;
+    background-position: center bottom 32px;
+    background-size: 342px 275px;
+    box-shadow: none;
+
+    @include retina-resolution {
+      background-image: url("../img/header_back_mobile@2x.png");
+      background-size: 342px 275px;
+    }
+
+    @include tablet-start {
+      padding: 48px 48px 371px;
+      background-image: url("../img/header_back_tablet.png");
+      background-position: right 48px bottom 56px;
+      background-size: 448px 358px;
+
+      @include retina-resolution {
+        background-image: url("../img/header_back_tablet@2x.png");
+        background-size: 448px 358px;
+      }
+    }
+
+    @include tablet-layout {
+      margin-bottom: 51px;
+      padding-top: 172px;
+      padding-bottom: 200px;
+      background-image: url("../img/header_back_tablet.png");
+      background-position: right 48px bottom 56px;
+      background-size: 448px 358px;
+
+      @include retina-resolution {
+        background-image: url("../img/header_back_tablet@2x.png");
+        background-size: 448px 358px;
+      }
+    }
+
+    @include desktop-start {
+      width: 100%;
+      margin-bottom: 148px;
+      padding-top: 302px;
+      background-image: none;
+
+      @include retina-resolution {
+        background-image: none;
+      }
+    }
+
+    @include desktop-hd {
+      padding-bottom: 412px;
+    }
+
+    &--skel {
+
+      @include desktop-start {
+        margin-bottom: 84px;
+        padding-top: 164px;
+        padding-bottom: 114px;
+      }
+
+      & .page__main-title {
+
+        &::after {
+          @include desktop-start {
+            position: absolute;
+            top: -100px;
+            right: 0;
+            content: "";
+            width: 481px;
+            height: 386px;
+            background-image: url("../img/header_back_tablet.png");
+            background-position: 0 0;
+            background-size: 481px 386px;
+            background-repeat: no-repeat;
+
+            @include retina-resolution {
+              background-image: url("../img/header_back_tablet@2x.png");
+              background-size: 481px 386px;
+            }
+          }
+
+          @include desktop-hd {
+            top: -162px;
+            right: 0;
+            width: 548px;
+            height: 440px;
+            background-image: url("../img/header_back_desktop.png");
+            background-position: 0 0;
+            background-size: 548px 440px;
+
+            @include retina-resolution {
+              background-image: url("../img/header_back_desktop@2x.png");
+              background-size: 548px 440px;
+            }
+          }
+        }
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: -15px;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 20px;
+      background-color: $blue-main;
+    }
+  }
+
+  &__header-wrapper {
+    @include wrapper;
+  }
+
+  &__header-link {
+    margin-top: 20px;
+    border: 2px solid $white-main;
+
+    @include tablet-start {
+      margin-top: 30px;
+    }
+
+    @include desktop-start {
+      margin-top: 45px;
+    }
+  }
+
+  // заголовок главной страницы
+  &__main-title {
+    @include text(36px, 46px, 700);
+
+    margin: 0;
+    color: $white-main;
+
+    @include tablet-layout {
+      font-size: 46px;
+      line-height: 68px;
+    }
+
+    @include desktop-start {
+      position: relative;
+      width: 1200px;
+      margin: 0 auto;
+      font-size: 56px;
+      line-height: 80px;
+    }
+
+    &::after {
+      @include desktop-start {
+        position: absolute;
+        top: -98px;
+        right: 0;
+        content: "";
+        width: 448px;
+        height: 358px;
+        background-image: url("../img/header_back_tablet.png");
+        background-position: 0 0;
+        background-size: 448px 358px;
+        background-repeat: no-repeat;
+
+        @include retina-resolution {
+          background-image: url("../img/header_back_tablet@2x.png");
+          background-size: 448px 358px;
+        }
+      }
+
+      @include desktop-hd {
+        top: -162px;
+        right: 0;
+        width: 548px;
+        height: 440px;
+        background-image: url("../img/header_back_desktop.png");
+        background-position: 0 0;
+        background-size: 548px 440px;
+
+        @include retina-resolution {
+          background-image: url("../img/header_back_desktop@2x.png");
+          background-size: 548px 440px;
+        }
+      }
+    }
+  }
+
+  // содержание главной страницы
+  &__main {
+    @include desktop-start {
+      @include wrapper;
+    }
+  }
+}
+
+// состояние 404
+.page__error {
+  min-height: auto;
+  background-color: $blue-main;
+  background-image: url("../img/error-message_mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @include retina-resolution {
+    background-image: url("../img/error-message_mobile@2x.jpg");
+  }
+
+  @include mobile-wide {
+    background-image: url("../img/error-message_tablet.jpg");
+
+    @include retina-resolution {
+      background-image: url("../img/error-message_tablet@2x.jpg");
+    }
+  }
+
+  @include desktop-start {
+    background-image: url("../img/error-message_desktop.jpg");
+    background-position: 50% 0;
+
+    @include retina-resolution {
+      background-image: url("../img/error-message_desktop@2x.jpg");
+    }
+  }
+}
+
+.page__vacancy {
+  position: relative;
+  overflow-x: hidden;
+
+  @include tablet-start {
+    padding: 0 48px;
+  }
+}
+
+.page__title {
+  margin: 0;
+  font-size: 36px;
+
+  @include desktop-start {
+    font-size: 56px;
+    line-height: 64px;
+  }
+}
+
+.page__title--blog {
+  padding-top: 46px;
+  padding-bottom: 29px;
+
+  @include tablet-layout {
+    padding-top: 55px;
+    padding-bottom: 72px;
+  }
+
+  @include desktop-start {
+    padding-top: 112px;
+    padding-bottom: 48px;
+  }
+}
+
+.page__breadcrumbs {
+  margin: 0;
+
+  @include tablet-layout {
+    font-size: 24px;
+  }
+
+  @include desktop-start {
+    font-size: 36px;
+  }
+}
+
+.page__breadcrumbs--vacancy {
+  margin-top: 53px;
+
+  @include tablet-layout {
+    margin-top: 61px;
+  }
+
+  @include desktop-start {
+    margin-top: 120px;
+  }
+}
+
+.page__breadcrumbs--article {
+  margin-top: 52px;
+
+  @include tablet-layout {
+    margin-top: 60px;
+  }
+
+  @include desktop-start {
+    margin-top: 83px;
+  }
+}

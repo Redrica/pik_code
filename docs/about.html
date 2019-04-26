@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная страница</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body class="page">
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
+      <!-- inject:svg --><!-- endinject -->
+    </div>
+
+    <header class="header">
+      <div class="header__wrapper">
+        <nav class="main-nav">
+          <a class="main-nav__logo  logo" href="main.html">
+            <img class="logo__image" src="img/pik-digital-logo.svg" width="124" height="47" alt="Логотип PIK digital">
+          </a>
+          <!-- Мобильное меню -->
+          <!-- Описание работы в файле menu.js -->
+          <!-- Активный класс меню  main-nav__link--active -->
+          <button class="main-nav__toggle" aria-label="Открыть меню">
+            <span class="main-nav__burger"></span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="vacancies.html">Вакансии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="blog.html">Блог</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="meetups.html">Мероприятия</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Решения</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__link--active" href="#">О нас</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page__wrapper">
+    <main class="page__main  about">
+      <h1 class="about__title">О нас</h1>
+      <!-- слайдер с фотографиями -->
+      <div class="about__slider  slider">
+        <div class="slider__content">
+          <!-- боковые кнопки переключения -->
+          <button class="slider__side-toggle  slider__side-toggle--left"></button>
+          <button class="slider__side-toggle  slider__side-toggle--right"></button>
+          <picture class="slider__item">
+            <source media="(min-width: 1296px)" srcset="img/slider-1_desktop.jpg 1x, img/slider-1_desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/slider-1_tablet.jpg 1x, img/slider-1_tablet@2x.jpg 2x">
+            <img class="slider__image" src="img/slider-1_mobile.jpg" srcset="img/slider-1_mobile@2x.jpg 2x" width="375" height="190" alt="Офис PIK-digital">
+          </picture>
+        </div>
+        <!-- переключатели фотографий под слайдером -->
+        <div class="slider__controls">
+          <button class="slider__toggle" type="button" aria-label="Слайд 1"></button>
+          <button class="slider__toggle" type="button" aria-label="Слайд 2"></button>
+          <button class="slider__toggle  slider__toggle--active" type="button" aria-label="Слайд 3"></button>
+          <button class="slider__toggle" type="button" aria-label="Слайд 4"></button>
+          <button class="slider__toggle" type="button" aria-label="Слайд 5"></button>
+        </div>
+      </div>
+      <!-- текстовый контент -->
+      <h2 class="about__subtitle">Про ПИК</h2>
+      <p class="about__text">ПИК — крупнейший российский девелопер, создающий жильё в Москве, Московской области и регионах России.</p>
+      <p class="about__text">Мы работаем с 1994 года и специализируемся на проектах в сегменте доступного жилья. С начала деятельности компания построила около 19 млн м² жилой недвижимости, обеспечив квартирами более 300 тысяч российских семей.</p>
+      <p class="about__text">ГК ПИК присутствует в 10 российских регионах и ведет работу по реализации обширного диверсифицированного портфеля проектов.</p>
+      <h2 class="about__subtitle">Про ПИК Digital</h2>
+      <p class="about__text">Мы делаем ставку на постоянные инновации и улучшение продукта. И мы создали ПИК Digital — отдельную ИТ-компанию, которая делает стройку технологичной и современной областью.</p>
+      <p class="about__text">Наши ИТ-проекты касаются всей деятельности ПИК: производства материалов, проектирования домов, строительства, девелопмента, финансов и экономики, закупок и продаж.</p>
+      <p class="about__text">Мы разрабатываем системы, сайты, мобильные приложения, ботов и хранилища данных, которые помогают нашим коллегам создавать самые лучшие дома. Никто не строит в России больше нас, поэтому мы накапливаем и анализируем столько данных про стройку, сколько нет ни у кого :)</p>
+    </main>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <a class="footer__logo  logo">
+          <img class="logo__image" src="img/pik-digital-logo.svg" width="104" height="40" alt="Логотип PIK digital">
+        </a>
+        <div class="footer__info">
+          <p class="footer__text">ООО "ПИК Технологии" 2018</p>
+          <p class="footer__text">
+            <a class="footer__link" href="tel:79453474343">+ 7 (945) 347-43-43</a>
+          </p>
+        </div>
+        <ul class="footer__social  social">
+          <li class="social__item">
+            <a class="social__link  social__link--fb" href="#">
+              <span class="visually-hidden">PIK-digital на Фейсбук</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--vk" href="#">
+              <span class="visually-hidden">PIK-digital ВКонтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--tw" href="#">
+              <span class="visually-hidden">PIK-digital в Твиттере</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/menu.min.js"></script>
+    <script src="js/header.min.js"></script>
+  </body>
+</html>

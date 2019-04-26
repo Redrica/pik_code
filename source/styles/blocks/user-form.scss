@@ -1,0 +1,68 @@
+// стили для страниц с формой ввода данных
+
+// контент страницы
+.user-form {
+  padding: 52px 16px 62px;
+
+  @include tablet-start {
+    padding: 60px 48px 70px;
+  }
+
+  @include desktop-start {
+    padding: 119px 0 196px;
+  }
+
+  // хлебные крошки
+  &__breadcrumbs {
+    margin-bottom: 55px;
+
+    @include tablet-start {
+      margin-bottom: 49px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 81px;
+    }
+  }
+
+  // заголовок страницы
+  &__title {
+    @include text(18px, 28px, 600);
+
+    margin: 0 0 19px;
+    text-align: center;
+    color: $charcoal;
+
+    @include tablet-start {
+      margin-bottom: 35px;
+      font-size: 22px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 60px;
+      font-size: 26px;
+      line-height: 1.2em;
+    }
+  }
+
+  // описание вакансии/мероприятия
+  &__description {
+    @include text(28px, 36px, 700);
+
+    display: block;
+    margin-bottom: 50px;
+    text-align: center;
+    color: $black-main;
+
+    @include desktop-start {
+      margin-bottom: 43px;
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    @include desktop-hd {
+      font-size: 56px;
+      line-height: 64px;
+    }
+  }
+}

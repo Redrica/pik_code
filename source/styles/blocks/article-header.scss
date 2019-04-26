@@ -1,0 +1,21 @@
+// Стили блока с шапкой статьи: заголовок + автор статьи + дата/время (страница Статья)
+
+.article-header__title {
+  margin: 0;
+  margin-bottom: 41px;
+  padding-top: 26px;
+  font-size: 28px;
+  line-height: 36px;
+
+  @include tablet-layout {
+    width: 500px;
+  }
+
+  @include desktop-start {
+    width: 100%;
+    margin-bottom: 56px;
+    padding-top: 77px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

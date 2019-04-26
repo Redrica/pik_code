@@ -1,0 +1,165 @@
+.blog-card-skeleton {
+  height: 608px;
+  background-image:
+    linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),
+
+    linear-gradient( #e3e3e3 216px, transparent 0 ),
+
+    linear-gradient( #e3e3e3 50px, transparent 0 ),
+    linear-gradient( #e3e3e3 50px, transparent 0 ),
+    linear-gradient( #e3e3e3 50px, transparent 0 ),
+    linear-gradient( #e3e3e3 50px, transparent 0 ),
+    linear-gradient( #e3e3e3 50px, transparent 0 ),
+    radial-gradient(circle 24px, #e3e3e3 99%, transparent 0 ),
+    linear-gradient( #e3e3e3 50px, transparent 0 );
+
+
+  background-repeat: no-repeat;
+  background-size:
+    50px 608px, /* highlight */
+
+    100% 216px,
+    83% 24px,
+    83% 16px,
+    83% 16px,
+    83% 16px,
+    53% 16px,
+    48px 48px,
+    62% 16px;
+
+  background-position:
+    0px 0px, /* highlight */
+
+    0px 0px,
+    32px 246px,
+    32px 342px,
+    32px 374px,
+    32px 406px,
+    32px 438px,
+    32px 528px,
+    100px 543px;
+
+  background-origin: content-box;
+  opacity: 0.5;
+  animation: blog-card-shine 0.8s infinite;
+  cursor: auto;
+
+
+  @include tablet-start {
+    height: 500px;
+
+    background-repeat: no-repeat;
+    background-size:
+      50px 500px, /* highlight */
+
+      100% 170px,
+      83% 20px,
+      83% 16px,
+      83% 16px,
+      83% 16px,
+      53% 16px,
+      48px 48px,
+      54% 16px;
+
+    background-position:
+      0px 0px, /* highlight */
+
+      0px 0px,
+      20px 190px,
+      20px 270px,
+      20px 300px,
+      20px 326px,
+      20px 356px,
+      20px 428px,
+      80px 443px;
+
+    animation: blog-card-shine 0.8s infinite;
+  }
+
+  @include desktop-start {
+    height: 608px;
+
+    background-repeat: no-repeat;
+    background-size:
+      50px 608px, /* highlight */
+
+      100% 216px,
+      83% 24px,
+      83% 16px,
+      83% 16px,
+      83% 16px,
+      53% 16px,
+      48px 48px,
+      65% 16px;
+
+
+    background-position:
+      0px 0px, /* highlight */
+
+      0px 0px,
+      32px 246px,
+      32px 342px,
+      32px 374px,
+      32px 406px,
+      32px 438px,
+      32px 528px,
+      100px 543px;
+
+    animation: blog-card-shine 1s infinite;
+  }
+}
+
+@keyframes blog-card-shine {
+
+  to {
+    background-position:
+      120% 0px, /* highlight */
+
+      0px 0px,
+      32px 246px,
+      32px 342px,
+      32px 374px,
+      32px 406px,
+      32px 438px,
+      32px 528px,
+      100px 543px
+  }
+}
+
+@include tablet-start {
+  @keyframes blog-card-shine {
+
+    to {
+      background-position:
+        120% 0px, /* highlight */
+
+        0px 0px,
+        20px 190px,
+        20px 270px,
+        20px 300px,
+        20px 326px,
+        20px 356px,
+        20px 428px,
+        80px 443px
+    }
+  }
+}
+
+@include desktop-start {
+  @keyframes blog-card-shine {
+
+    to {
+      background-position:
+        120% 0px, /* highlight */
+
+        0px 0px,
+        32px 246px,
+        32px 342px,
+        32px 374px,
+        32px 406px,
+        32px 438px,
+        32px 528px,
+        100px 543px
+    }
+  }
+}

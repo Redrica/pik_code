@@ -1,0 +1,46 @@
+// блок с чекбоксом-подтверждением
+
+.input-checkbox {
+  padding-left: 32px;
+
+  // подпись к чекбоксу
+  &__description {
+    @include text(18px, 1.2px, 400);
+
+    position: relative;
+    letter-spacing: -0.01em;
+    color: $black-main;
+
+    @include mobile-wide {
+      letter-spacing: 0;
+    }
+
+    @include desktop-start {
+      font-size: 22px;
+    }
+
+    // графика чекбокса
+    &::before {
+      position: absolute;
+      top: 1px;
+      left: -32px;
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      border: solid 2px transparentize($black-full, 0.46);
+      border-radius: 2px;
+      cursor: pointer;
+
+      @include desktop-start {
+        top: 2px;
+      }
+    }
+  }
+
+  // отмеченный чекбокс
+  &__input:checked + .input-checkbox__description::before {
+    border: none;
+    background: url("../img/checkbox_checked.svg") no-repeat center center;
+  }
+}

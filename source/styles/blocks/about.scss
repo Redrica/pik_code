@@ -1,0 +1,113 @@
+// стили для страницы О нас, версия со слайдером наверху.
+// стили для альтернативного варианта макета ниже, за каскадом от
+// .about--second
+
+.about {
+  padding: 45px 16px 25px;
+
+  @include tablet-start {
+    padding: 53px 48px 32px;
+  }
+
+  @include desktop-start {
+    padding: 112px 0 162px;
+  }
+
+  // заголовок страницы
+  &__title {
+    @include text(36px, 1.2em, 700);
+
+    margin: 0 0 28px;
+
+    @include tablet-start {
+      margin-bottom: 44px;
+    }
+
+    @include desktop-start {
+      margin-bottom: 43px;
+      font-size: 56px;
+      line-height: 64px;
+    }
+  }
+  // слайдер
+  &__slider {
+    margin-bottom: -9px;
+
+    @include tablet-start {
+      margin-bottom: 0;
+    }
+  }
+  // заголовок тестовой части
+  &__subtitle {
+    @include text(22px, 22px, 600);
+
+    margin: 41px 0 23px;
+    color: $charcoal;
+
+    @include tablet-start {
+      margin-top: 47px;
+      margin-bottom: 29px;
+    }
+
+    @include desktop-start {
+      margin-top: 85px;
+      margin-bottom: 38px;
+      font-size: 56px;
+      line-height: 64px;
+    }
+    // первый заголовок в контентной части
+    &:first-of-type {
+      margin-top: 41px;
+
+      @include tablet-start {
+        margin-top: 46px;
+      }
+
+      @include desktop-start {
+        margin-top: 51px;
+      }
+    }
+  }
+  // основной текст
+  &__text {
+    @include text(18px, 32px, 400);
+
+    margin: 0 0 36px;
+
+    @include desktop-start {
+      font-size: 22px;
+    }
+  }
+
+  // стили для альтернативной версии макета, слайдер внизу
+  &--second {
+    padding-bottom: 60px;
+
+    @include tablet-start {
+      padding-top: 85px;
+      padding-bottom: 80px;
+    }
+
+    @include desktop-start {
+      padding-top: 138px;
+      padding-bottom: 212px;
+    }
+    // для первого заголовка в контентной части
+    & .about__subtitle:first-of-type {
+      margin-top: 0;
+    }
+
+    & .about__slider {
+      margin-top: 60px;
+      margin-bottom: 0;
+
+      @include tablet-start {
+        margin-top: 90px;
+      }
+
+      @include desktop-start {
+        margin-top: 53px;
+      }
+    }
+  }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная страница</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body class="page">
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
+      <!-- inject:svg --><!-- endinject -->
+    </div>
+
+    <header class="header">
+      <div class="header__wrapper">
+        <nav class="main-nav">
+          <a class="main-nav__logo  logo" href="main.html">
+            <img class="logo__image" src="img/pik-digital-logo.svg" width="124" height="47" alt="Логотип PIK digital">
+          </a>
+          <!-- Мобильное меню -->
+          <!-- Описание работы в файле menu.js -->
+          <!-- Активный класс меню  main-nav__link--active -->
+          <button class="main-nav__toggle" aria-label="Открыть меню">
+            <span class="main-nav__burger"></span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="vacancies.html">Вакансии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="blog.html">Блог</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="meetups.html">Мероприятия</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__link--active" href="decisions.html">Решения</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">О нас</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page__wrapper">
+    <main class="page__main  decisions">
+      <h1 class="decisions__title">Наши решения</h1>
+
+      <div class="decisions__header">
+        <p class="decisions__subtitle">Экстерн</p>
+        <p class="decisions__text">Подготовка и отправка любых видов отчетности во все контролирующие органы. Переписка с ФНС, ПФР и Росстатом.</p>
+      </div>
+
+      <ul class="decisions__list">
+        <li class="decisions__item">
+          <article class="dec-card  dec-card--gsu">
+            <h2 class="dec-card__title">
+              <a class="dec-card__link" href="#">G-Suite</a>
+            </h2>
+            <p class="dec-card__text">Все инструменты для эффективной работы в одном пакете</p>
+            <picture class="dec-card__image">
+              <img src="img/g-suite_back.png" srcset="img/g-suite_back@2x.png 2x" width="372" height="212" alt="Иллюстрация G-Suite">
+            </picture>
+          </article>
+        </li>
+
+        <li class="decisions__item">
+          <article class="dec-card  dec-card--gdo">
+            <h2 class="dec-card__title">
+              <a class="dec-card__link" href="#">Google doc</a>
+            </h2>
+            <p class="dec-card__text">Благодаря Google Документам вы можете создавать текстовые документы</p>
+            <picture class="dec-card__image">
+              <img src="img/g-doc_back.png" srcset="img/g-doc_back@2x.png 2x" width="372" height="212" alt="Иллюстрация Google doc">
+            </picture>
+          </article>
+        </li>
+
+        <li class="decisions__item">
+          <article class="dec-card  dec-card--con">
+            <h2 class="dec-card__title">
+              <a class="dec-card__link" href="#">Контур</a>
+            </h2>
+            <p class="dec-card__text">Инновационные технологии в бухгалтерском учете</p>
+            <picture class="dec-card__image">
+              <img src="img/contour_back.png" srcset="img/contour_back@2x.png 2x" width="372" height="212" alt="Иллюстрация Контур">
+            </picture>
+          </article>
+        </li>
+
+        <li class="decisions__item">
+          <article class="dec-card  dec-card--chrome">
+            <h2 class="dec-card__title">
+              <a class="dec-card__link" href="#">Chrome</a>
+            </h2>
+            <p class="dec-card__text">Быстрый, удобный и безопасный браузер для всех ваших устройств.</p>
+            <picture class="dec-card__image">
+              <img src="img/chrome_back.png" srcset="img/chrome_back@2x.png 2x" width="372" height="212" alt="Иллюстрация Chrome">
+            </picture>
+          </article>
+        </li>
+
+        <li class="decisions__item">
+          <article class="dec-card  dec-card--cal">
+            <h2 class="dec-card__title">
+              <a class="dec-card__link" href="#">Календарь</a>
+            </h2>
+            <p class="dec-card__text">Все важные события и планы в одном сервисе. Поделитесь ими с друзьями!</p>
+            <picture class="dec-card__image">
+              <img src="img/calendar_back.png" srcset="img/calendar_back@2x.png 2x" width="378" height="212" alt="Иллюстрация Календаря">
+            </picture>
+          </article>
+        </li>
+
+        <li class="decisions__item">
+          <article class="dec-card  dec-card--gduo">
+            <h2 class="dec-card__title">
+              <a class="dec-card__link" href="#">Google duo</a>
+            </h2>
+            <p class="dec-card__text">Простое и быстрое приложение для видеосвязи</p>
+            <picture class="dec-card__image">
+              <img src="img/g-duo_back.png" srcset="img/g-duo_back@2x.png 2x" width="378" height="212" alt="Иллюстрация Google duo">
+            </picture>
+          </article>
+        </li>
+
+        <li class="decisions__item">
+          <article class="dec-card  dec-card--gplus">
+            <h2 class="dec-card__title">
+              <a class="dec-card__link" href="#">Google+</a>
+            </h2>
+            <p class="dec-card__text">Социальная сеть от Google, где вы найдете тысячи сообществ по интересам</p>
+            <picture class="dec-card__image">
+              <img src="img/g-plus_back.png" srcset="img/g-plus_back@2x.png 2x" width="378" height="212" alt="Иллюстрация Google+">
+            </picture>
+          </article>
+        </li>
+
+        <li class="decisions__item">
+          <article class="dec-card  dec-card--gallo">
+            <h2 class="dec-card__title">
+              <a class="dec-card__link" href="#">Google Allo</a>
+            </h2>
+            <p class="dec-card__text">Умное приложение для обмена сообщениями с множеством полезных функций</p>
+            <picture class="dec-card__image">
+              <img src="img/g-allo_back.png" srcset="img/g-allo_back@2x.png 2x" width="372" height="212" alt="Иллюстрация Google Allo">
+            </picture>
+          </article>
+        </li>
+
+        <li class="decisions__item">
+          <article class="dec-card  dec-card--gmb">
+            <h2 class="dec-card__title">
+              <a class="dec-card__link" href="#">Google Мой бизнес</a>
+            </h2>
+            <p class="dec-card__text">Благодаря Google Документам вы можете создавать текстовые документы</p>
+            <picture class="dec-card__image">
+              <img src="img/g-business_back.png" srcset="img/g-business_back@2x.png 2x" width="378" height="212" alt="Иллюстрация Google Мой бизнес">
+            </picture>
+          </article>
+        </li>
+
+        <li class="decisions__item">
+          <article class="dec-card  dec-card--ga">
+            <h2 class="dec-card__title">
+              <a class="dec-card__link" href="#">Google Analytics</a>
+            </h2>
+            <p class="dec-card__text">Получайте статистику посещений, покупок и других действий</p>
+            <picture class="dec-card__image">
+              <img src="img/g-a_back.png" srcset="img/g-a_back@2x.png 2x" width="372" height="212" alt="Иллюстрация Google Analytics">
+            </picture>
+          </article>
+        </li>
+      </ul>
+    </main>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <a class="footer__logo  logo">
+          <img class="logo__image" src="img/pik-digital-logo.svg" width="104" height="40" alt="Логотип PIK digital">
+        </a>
+        <div class="footer__info">
+          <p class="footer__text">ООО "ПИК Технологии" 2018</p>
+          <p class="footer__text">
+            <a class="footer__link" href="tel:79453474343">+ 7 (945) 347-43-43</a>
+          </p>
+        </div>
+        <ul class="footer__social  social">
+          <li class="social__item">
+            <a class="social__link  social__link--fb" href="#">
+              <span class="visually-hidden">PIK-digital на Фейсбук</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--vk" href="#">
+              <span class="visually-hidden">PIK-digital ВКонтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link  social__link--tw" href="#">
+              <span class="visually-hidden">PIK-digital в Твиттере</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/menu.min.js"></script>
+    <script src="js/header.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+// Стили блока представленных вакансий на странице Вакансии
+
+.vacancies {
+  padding-bottom: 22px;
+
+  @include tablet-layout {
+    padding-bottom: 39px;
+  }
+
+  @include desktop-start {
+    padding-bottom: 142px;
+  }
+}
+
+.vacancies__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 29px;
+
+  @include tablet-layout {
+    padding-top: 34px;
+  }
+
+  @include desktop-start {
+    padding-top: 26px;
+  }
+}
+
+.vacancies__card {
+  margin-bottom: 24px;
+
+  @include mobile-wide {
+    margin-right: 16px;
+
+    &:nth-child(2n + 2) {
+      margin-right: 0;
+    }
+  }
+
+  @include tablet-layout {
+    margin-right: 2.16%;
+    margin-bottom: 32px;
+
+    &:nth-child(2n + 2) {
+      margin-right: 2.16%;
+    }
+
+    &:nth-child(3n + 3) {
+      margin-right: 0;
+    }
+  }
+
+  @include desktop-start {
+    margin-right: 0;
+    margin-bottom: 56px;
+
+    &:nth-child(2n + 2) {
+      margin-right: 0;
+    }
+  }
+}
+
+.vacancies__card:nth-child(n + 7):not(.vacancies__card--search) {
+  display: none;
+
+  @include tablet-start {
+    display: block;
+  }
+}

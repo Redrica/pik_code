@@ -1,0 +1,188 @@
+// Стили карточки мероприятия
+
+.meetup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 16px;
+  text-decoration: none;
+  color: $black-main;
+  transition: 0.5s;
+
+  @include mobile-wide {
+    width: 50%;
+  }
+
+  @include tablet-layout {
+    width: 33.333%;
+    max-width: 400px;
+    padding: 24px;
+  }
+
+  @include desktop-start {
+    padding: 36px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $meetup-card-hover;
+  }
+
+  &--skel {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.meetup--soon {
+  background-color: $meetup-card-soon;
+
+  &:hover,
+  &:focus {
+    background-color: $meetup-soon-hover;
+  }
+}
+
+.meetup--close {
+  color: $meetup-text-close;
+  background-color: $meetup-card-close;
+
+  &:hover,
+  &:focus {
+    background-color: $meetup-card-hover;
+  }
+}
+
+.meetup--perfect {
+  padding-bottom: 23px;
+
+  @include desktop-start {
+    padding-bottom: 36px;
+  }
+}
+
+.meetup--empty {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+
+  @include mobile {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
+
+.meetup__title {
+  margin: 0;
+  margin-bottom: 56px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0.1px;
+
+  @include tablet-layout {
+    min-height: 64px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+
+  @include desktop-start {
+    min-height: 68px;
+    margin-bottom: 96px;
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+
+.meetup__title--close {
+  color: $meetup-text-close;
+}
+
+.meetup__link {
+  text-decoration: none;
+  color: $black-main;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+
+  &:hover[href],
+  &:focus[href] {
+    opacity: 0.7;
+  }
+
+  &:active[href] {
+    opacity: 0.3;
+  }
+}
+
+.meetup__link--disabled {
+  color: $meetup-text-close;
+}
+
+.meetup__date {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+
+  @include tablet-layout {
+    margin-bottom: 16px;
+    padding-top: 26px;
+    font-size: 36px;
+    line-height: normal;
+  }
+
+  @include desktop-start {
+    margin-bottom: 36px;
+    padding-top: 0;
+    font-size: 48px;
+    line-height: normal;
+  }
+}
+
+.meetup__date--close {
+  color: $meetup-text-close;
+}
+
+.meetup__time {
+  @include desktop-start {
+    line-height: 48px;
+  }
+}
+
+.meetup__number {
+  display: inline-block;
+  margin-right: 18px;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 48px;
+
+  @include tablet-layout {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @include desktop-start {
+    font-size: 76px;
+    line-height: 76px;
+  }
+}
+
+.meetup__number--close {
+  color: $meetup-text-close;
+}
+
+.meetup__button {
+  width: 100%;
+
+  @include desktop-start {
+    width: 328px;
+  }
+}

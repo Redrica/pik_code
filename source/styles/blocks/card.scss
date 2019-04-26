@@ -1,0 +1,283 @@
+// Стили карточки вакансии
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 164px;
+  padding: 24px 16px;
+  text-decoration: none;
+  border-radius: 12px;
+  background-color: $white-main;
+  box-shadow: $card-shadow;
+  transition-duration: 0.5s;
+
+  @include mobile-wide {
+    width: calc(100% / 2 - 8px);
+  }
+
+  @include tablet-start {
+    width: 48.4%;
+  }
+
+  @include tablet-layout {
+    width: 31.79%;
+    min-height: 140px;
+    padding: 16px;
+  }
+
+  @include desktop-start {
+    width: 31.55%;
+    max-width: 379px;
+    min-height: 180px;
+    padding: 32px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $card-hover-shadow;
+    transition-timing-function: linear;
+  }
+}
+
+.card__link {
+  display: inline-block;
+  text-decoration: none;
+  color: $black-main;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.card--search {
+  position: relative;
+  padding: 0;
+  border: 1px solid $card-border-color;
+  box-shadow: none;
+  transition-duration: 0.5s;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $blue-main;
+    box-shadow: none;
+  }
+
+  &:active {
+    border: 1px solid $blue-main;
+    opacity: 0.3;
+  }
+}
+
+.card__link--search {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 164px;
+  padding: 24px 16px;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  @include tablet-layout {
+    min-height: 140px;
+    padding: 16px;
+  }
+
+  @include desktop-start {
+    min-height: 180px;
+    padding: 32px;
+  }
+}
+
+.card--staff {
+  position: relative;
+  padding: 0;
+}
+
+.card__link--staff {
+  width: 100%;
+  min-height: 164px;
+  padding: 24px 16px;
+
+  @include tablet-layout {
+    min-height: 140px;
+    padding: 16px;
+  }
+
+  @include desktop-start {
+    min-height: 180px;
+    padding: 32px;
+  }
+}
+
+.card--result {
+  max-width: none;
+  min-height: auto;
+  padding: 24px 16px;
+  padding-top: 25px;
+
+  @include tablet-start {
+    padding-top: 24px;
+    padding-right: 21px;
+    padding-bottom: 24px;
+    padding-left: 72px;
+  }
+
+  &:hover,
+  &:focus {
+    border-radius: 0;
+    background-color: $card-result-hover;
+    box-shadow: none;
+  }
+}
+
+.card--last {
+  @include tablet-layout {
+    padding-bottom: 32px;
+
+    &:hover,
+    &:focus {
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+  }
+}
+
+.card__title {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  color: $black-main;
+
+  @include tablet-layout {
+    margin-bottom: 32px;
+    font-size: 18px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 40px;
+    font-size: 22px;
+  }
+}
+
+.card__title--search {
+  margin-bottom: 54px;
+
+  @include tablet-layout {
+    margin-bottom: 48px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 54px;
+  }
+}
+
+.card__title--result {
+  margin-bottom: 32px;
+
+  @include tablet-layout {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.card__team {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.card__image {
+  display: block;
+  margin-right: 16px;
+  border: solid 1px $page-color;
+  border-radius: 50px;
+  box-shadow: 0 0 0 2px $blue-main;
+}
+
+.card__tagline {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #80879f;
+}
+
+.card__name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  color: $blue-main;
+}
+
+.card__name--search {
+  width: 100%;
+  padding-top: 16px;
+
+  &::after {
+    position: absolute;
+    right: 16px;
+    bottom: 26px;
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+  }
+
+  @include tablet-layout {
+    padding-top: 1px;
+
+    &::after {
+      right: 15px;
+      bottom: 14px;
+    }
+  }
+
+  @include desktop-start {
+    padding-top: 16px;
+
+    &::after {
+      right: 30px;
+      bottom: 33px;
+    }
+  }
+}

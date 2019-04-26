@@ -1,0 +1,57 @@
+// Стили хедера
+
+.header {
+  position: relative;
+  z-index: 150;
+  padding: 13px 0 12px;
+  background-color: $blue-main;
+  box-shadow: 0 6px 6px 0 transparentize($black-full, 0.7);
+
+  @include tablet-start {
+    position: fixed;
+    z-index: 150;
+    right: 0;
+    left: 0;
+    padding: 33px 0 16px;
+    transition: 0.5s;
+  }
+
+  @include desktop-start {
+    padding: 17px 0 17px;
+  }
+
+  &--main {
+    padding-top: 16px;
+    box-shadow: none;
+
+    @include tablet-start {
+      padding-top: 33px;
+    }
+
+    @include desktop-start {
+      padding-top: 17px;
+    }
+  }
+
+  &--scroll {
+    @include tablet-start {
+      padding: 17px 0 17px;
+      box-shadow: 0 6px 6px 0 transparentize($black-full, 0.7);
+    }
+  }
+
+  // обертка для контента
+  &__wrapper {
+    padding: 0 16px;
+
+    @include tablet-start {
+      padding: 0 48px;
+    }
+
+    @include desktop-start {
+      @include wrapper;
+
+      padding: 0;
+    }
+  }
+}

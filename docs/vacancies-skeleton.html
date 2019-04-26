@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вакансии</title>
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+</head>
+
+<body class="page">
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden" class="symbols">
+    <!-- inject:svg -->
+    <!-- endinject -->
+  </div>
+
+  <header class="header">
+    <div class="header__wrapper">
+      <nav class="main-nav">
+        <a class="main-nav__logo  logo" href="main.html">
+          <img class="logo__image" src="img/pik-digital-logo.svg" width="124" height="47" alt="Логотип PIK digital">
+        </a>
+        <button class="main-nav__toggle" aria-label="Открыть меню">
+          <span class="main-nav__burger"></span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active">Вакансии</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="blog.html">Блог</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="meetups.html">Мероприятия</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Решения</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="about.html">О нас</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page__wrapper">
+    <main class="page__vacancy container">
+      <!--Панель действий пользователя-->
+      <div class="panel">
+        <h1 class="panel__title">Вакансии</h1>
+        <div class="panel__buttons">
+          <button class="panel__button panel__button--filter" type="button" aria-label="Open">
+            <span class="visually-hidden">Фильтр</span>
+          </button>
+          <button class="panel__button panel__button--search" type="button" aria-label="Open">
+            <span class="visually-hidden">Поиск</span>
+          </button>
+        </div>
+        <!--Фильтр вакансий-->
+        <div class="panel__filter filter filter--skel">
+          <div class="blink  blink--narrow"></div>
+
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Разработка IOS</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Дизайн</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Скрам-мастера</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Системные аналитки</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Разработка Android</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Тестирование</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Фронтенд-разработка</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Управление продуктом</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Поток</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Маркетинг</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Иследования, респонденты</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">HR</span>
+          </button>
+          <button class="filter__button chip chip--skel" type="button" aria-label="Check">
+            <span class="chip__fix">Big Data</span>
+          </button>
+        </div>
+        <!--Модальное окно поиска-->
+        <div class="panel__search modal-search modal-search__hidden">
+          <form class="modal-search__form" action="#" method="get">
+            <label for="site_search">
+              <span class="visually-hidden">Поиск по вакансиям</span>
+            </label>
+            <input class="modal-search__field" type="search" name="search" id="site_search" placeholder="Поиск по вакансиям" autocomplete="off">
+            <button class="modal-search__close" type="button">
+              <span class="visually-hidden" aria-label="Close">Закрыть поиск</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      <!--Блок представленных вакансий-->
+      <section class="vacancies">
+        <h2 class="visually-hidden">Актуальные вакансии</h2>
+        <div class="vacancies__list">
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton"></article>
+          <article class="vacancies__card card vacancy-skeleton vacancy-skeleton--search"></article>
+        </div>
+      </section>
+      <!--Подложка при активации модального окна поиска / фильтра-->
+      <div class="overlay"></div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a class="footer__logo  logo">
+        <img class="logo__image" src="img/pik-digital-logo.svg" width="104" height="40" alt="Логотип PIK digital">
+      </a>
+      <div class="footer__info">
+        <p class="footer__text">ООО "ПИК Технологии" 2018</p>
+        <p class="footer__text">
+          <a class="footer__link" href="tel:79453474343">+ 7 (945) 347-43-43</a>
+        </p>
+      </div>
+      <ul class="footer__social  social">
+        <li class="social__item">
+          <a class="social__link  social__link--fb" href="#">
+            <span class="visually-hidden">PIK-digital на Фейсбук</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--vk" href="#">
+            <span class="visually-hidden">PIK-digital ВКонтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link  social__link--tw" href="#">
+            <span class="visually-hidden">PIK-digital в Твиттере</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/filter.min.js"></script>
+  <script src="js/search.min.js"></script>
+  <script src="js/menu.min.js"></script>
+  <script src="js/header.min.js"></script>
+
+  <!--Полифилы для IE-->
+  <script src="js/array-from.min.js"></script>
+  <script src="js/closest.min.js"></script>
+  <script src="js/matches.min.js"></script>
+
+</body>
+
+</html>

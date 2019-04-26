@@ -1,0 +1,84 @@
+// Стили секции на странице Блог
+
+.blog {
+  padding-bottom: 75px;
+
+  @include tablet-layout {
+    padding-bottom: 82px;
+  }
+
+  @include desktop-start {
+    padding-bottom: 200px;
+  }
+}
+
+.blog__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include tablet-layout {
+    margin-bottom: 33px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 84px;
+    padding-top: 2px;
+  }
+}
+
+.blog__card {
+  margin-bottom: 28px;
+
+  @include tablet-layout {
+    margin-bottom: 72px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 96px;
+  }
+
+  &:last-child {
+    margin-bottom: 12px;
+  }
+}
+
+.blog__card--stages {
+  @include desktop-start {
+    margin-bottom: 90px;
+  }
+}
+
+.blog__card--travel {
+  @include desktop-start {
+    margin-bottom: 101px;
+  }
+}
+
+.blog__button {
+  max-width: 343px;
+  margin: 0 auto;
+
+  @include mobile-wide {
+    width: 60%;
+  }
+
+  @include tablet-start {
+    width: 40%;
+  }
+
+  @include tablet-layout {
+    width: 36.2%;
+  }
+
+  @include desktop-start {
+    width: 44%;
+    margin-top: 95px;
+  }
+
+  &--skel {
+    @include tablet-start {
+      margin-top: 55px;
+    }
+  }
+}

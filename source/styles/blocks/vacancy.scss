@@ -1,0 +1,39 @@
+// Стили секции на странице Описание вакансии
+
+.vacancy {
+  padding-bottom: 47px;
+
+  @include tablet-layout {
+    padding-bottom: 56px;
+  }
+
+  @include desktop-start {
+    padding-bottom: 186px;
+  }
+}
+
+.vacancy__response {
+  max-width: 343px;
+  margin: 0 auto;
+  margin-bottom: 51px;
+
+  @include tablet-start {
+    max-width: none;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  @include desktop-start {
+    margin-bottom: 57px;
+  }
+}
+
+.vacancy__share {
+  max-width: 343px;
+  margin: 0 auto;
+
+  @include tablet-start {
+    max-width: none;
+    margin: 0;
+  }
+}
